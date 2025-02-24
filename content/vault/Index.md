@@ -1,13 +1,11 @@
 ---
 longform:
   format: scenes
-  title: possvault
+  title: vault
   workflow: Default Workflow
   sceneFolder: /
   scenes:
     - test
-    - test page
-    - test linkage page
   sceneTemplate: Templates/new page.md
   ignoredFiles: []
 ---
