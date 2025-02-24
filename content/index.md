@@ -1,6 +1,6 @@
 ---
-title: Welcome to Quartz
+title: Welcome to the Possum Vault
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+*The Possum Vault* is my personal knowledge base and organizer/planner. 
+browse the left hand side for links n such okay?
