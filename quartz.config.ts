@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "kb.kingposs.com",
-    ignorePatterns: ["Private", "Templates", ".obsidian", "Reed", "Eden"],
+    ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: true,
     theme: {
