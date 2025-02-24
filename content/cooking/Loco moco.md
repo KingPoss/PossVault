@@ -1,5 +1,5 @@
 ---
-title: Loco Moco
+title: Loco moco
 draft: false
 tags:
   - cooking
