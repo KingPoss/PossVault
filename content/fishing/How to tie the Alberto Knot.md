@@ -4,4 +4,4 @@ draft: false
 tags:
   - fishing
 ---
-![[alberto.mp4]]
+![[alberto.mp4 | 200 ]]
