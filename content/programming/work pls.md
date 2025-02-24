@@ -2,6 +2,6 @@
 title: work pls
 draft: false
 tags:
-  - tech/programming
+  - programming
 ---
 test hee hooo
