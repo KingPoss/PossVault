@@ -14,4 +14,6 @@ tags: []
 - [Historic Altadena payphone](https://losangelesexplorersguild.com/2022/06/07/the-last-payphone-before-the-forest/)
 - [Telecommunications history](https://www.telcomhistory.org/)
 - [Connections museum](https://www.youtube.com/@ConnectionsMuseum)
+- test edit
+- 
 
