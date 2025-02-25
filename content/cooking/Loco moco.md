@@ -18,5 +18,4 @@ tags:
 - Cook egg, over-easy or over-medium, whatever you want
 - Place egg on top
 - Add your condiments
-- Enjoy, and get ready for the itis 
-- editing this to test something
+- Enjoy, and get ready for the itis
