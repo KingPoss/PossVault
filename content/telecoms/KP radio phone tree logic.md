@@ -11,4 +11,6 @@ tags:
  There, the main SIP and queue is checked. If the mainline SIP (microSIP on PC) is unavailable or no one is logged into the queue to answer calls, send caller to the KP Radio ringer group.
  The KP radio ringer group consists of the mobile softphone client, and rotary phone connected to VOIP via ATA.
  From here, the call can be answered by either the rotary or mobile phone. This allows me to receive calls to the station, even when away, or when a broadcast is not currently live.
- 
+
+
+test edit
