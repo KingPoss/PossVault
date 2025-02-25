@@ -24,3 +24,5 @@ tags:
 - Voip.ms (telecoms)
 - Obsidian (note taking)
 - Quartz v4 (static site generation via markdown)
+- edit edit edit
+- push push push
