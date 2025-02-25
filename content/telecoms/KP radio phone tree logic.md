@@ -12,5 +12,3 @@ tags:
  The KP radio ringer group consists of the mobile softphone client, and rotary phone connected to VOIP via ATA.
  From here, the call can be answered by either the rotary or mobile phone. This allows me to receive calls to the station, even when away, or when a broadcast is not currently live.
 
-
-editing this page to test reload function
