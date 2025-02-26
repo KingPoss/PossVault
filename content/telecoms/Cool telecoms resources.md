@@ -1,8 +1,8 @@
 ---
 title: Cool telecoms resources
 draft: false
-tags: []
-
+tags:
+  - telecoms
 ---
 # Cool telecoms sites, forums, and resources
 - [Telephone world](https://telephoneworld.org/)
