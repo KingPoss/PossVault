@@ -1,0 +1,10 @@
+- **Path into Music & Tech:** What’s the backstory of how you became a musician and artist? Was there a moment in your life that set you on this path of becoming a creative, or have you always had an artistic spark?
+- **Influences and Idols:** Who are some of your musical or artistic influences? Are there composers, visual artists, or anyone else who inspired you to blend different mediums in the way you do?
+- **Nostalgia and Memory:** Your artist statement mentions nostalgia and memory as major inspirations. Why are those themes important to you, and how do they manifest in your work?
+- **Personal Artifacts in Art:** You also draw on family artifacts and personal experiences in your art​. Can you give an example of how something from your personal life—maybe a family story or an old photograph—inspired a composition or installation?
+- **Wearing Many Hats:** You juggle multiple roles—composer, performer, coder, visual designer. How do you manage wearing all these different hats? Does excelling in one area ever come at the expense of another, or do they all feed into each other?
+- **Mentors and Milestones:** As you progressed in your career, were there any mentors or pivotal experiences (such as attending the REDNOTE or soundSCAPE workshops) that significantly shaped your approach or confidence as an artist?
+- **Upcoming Endeavors:** Looking ahead, what new projects or ideas are you excited to explore? Are there any emerging technologies or artistic collaborations on the horizon for you?
+- **Future of Music & Tech:** Where do you see the intersection of music and technology heading in the next decade, and how do you hope to contribute to or shape that future?
+- **Advice to Creators:** Finally, what advice would you give to young artists or composers who want to experiment with technology, or even build their own websites to showcase their work? Any lessons from your journey that you’d pass on to the next generation of creatives?
+- 
