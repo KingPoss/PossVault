@@ -1,7 +1,9 @@
 ---
-{"title":"Tool & service list","draft":false,"tags":["tools"],"publish":true,"path":"content/tools/Tool & service list.md","permalink":"/content/tools/tool-and-service-list/","PassFrontmatter":true}
+title: Tool & service list
+draft: false
+tags:
+  - tools
 ---
-
 # Owned tools/devices who's purpose and condition need to be documented
 - Grandstream HT802v1 Analog Telephone Adapter
 - NanoVNA Vector Network Analyzer
