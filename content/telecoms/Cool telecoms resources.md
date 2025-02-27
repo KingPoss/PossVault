@@ -1,9 +1,7 @@
 ---
-title: Cool telecoms resources
-draft: false
-tags:
-  - telecoms
+{"title":"Cool telecoms resources","draft":false,"tags":["telecoms"],"publish":true,"path":"content/telecoms/Cool telecoms resources.md","permalink":"/content/telecoms/cool-telecoms-resources/","PassFrontmatter":true}
 ---
+
 # Cool telecoms sites, forums, and resources
 - [Telephone world](https://telephoneworld.org/)
 - [Evan Doorbell tapes](https://evan-doorbell.com/)

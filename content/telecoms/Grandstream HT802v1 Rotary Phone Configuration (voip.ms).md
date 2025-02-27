@@ -1,9 +1,7 @@
 ---
-title: How to set up Grandstream HT802v1 to use a rotary phone with VOIP.MS
-draft: false
-tags:
-  - telecoms
+{"title":"How to set up Grandstream HT802v1 to use a rotary phone with VOIP.MS","draft":false,"tags":["telecoms"],"publish":true,"path":"content/telecoms/Grandstream HT802v1 Rotary Phone Configuration (voip.ms).md","permalink":"/content/telecoms/grandstream-ht-802v1-rotary-phone-configuration-voip-ms/","PassFrontmatter":true}
 ---
+
 Gotten from the [voip.ms wiki](https://wiki.voip.ms/article/Grandstream_HandyTone_802_-_HT802), this YT vid from [Abraham Moller](https://www.youtube.com/watch?v=rktWAJB2EHU)
 
 Click on FXS PORT1 and configure your settings accordingly:  

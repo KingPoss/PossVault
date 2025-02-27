@@ -1,9 +1,7 @@
 ---
-title: Air fryer cornish game hen
-draft: false
-tags:
-  - cooking
+{"title":"Air fryer cornish game hen","draft":false,"tags":["cooking"],"publish":true,"path":"content/cooking/Air fryer cornish game hen.md","permalink":"/content/cooking/air-fryer-cornish-game-hen/","PassFrontmatter":true}
 ---
+
 # Ingredients 
 - Mrs. Dash table blend
 - Onion powder

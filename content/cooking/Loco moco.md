@@ -1,9 +1,7 @@
 ---
-title: Loco moco
-draft: false
-tags:
-  - cooking
+{"title":"Loco moco","draft":false,"tags":["cooking"],"publish":true,"path":"content/cooking/Loco moco.md","permalink":"/content/cooking/loco-moco/","PassFrontmatter":true}
 ---
+
 # Ingredients
 - Sticky white rice
 - Beef patty (85% lean 15% fat)
