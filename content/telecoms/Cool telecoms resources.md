@@ -14,5 +14,6 @@ tags:
 - [Historic Altadena payphone](https://losangelesexplorersguild.com/2022/06/07/the-last-payphone-before-the-forest/)
 - [Telecommunications history](https://www.telcomhistory.org/)
 - [Connections museum](https://www.youtube.com/@ConnectionsMuseum)
-
+- MODEL 200 SLIM LINE/slenderset ROTARY, Most likely drop in replacement for buttset rotary
+![[Screenshot_20250227-204552.png]]
 
