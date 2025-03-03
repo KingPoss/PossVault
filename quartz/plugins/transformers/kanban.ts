@@ -1,4 +1,4 @@
-import { QuartzTransformerPlugin } from "../types"  // adjust path as needed
+import { QuartzTransformerPlugin } from "../types" // adjust path as needed
 
 export const Kanban: QuartzTransformerPlugin = () => {
   return {
@@ -21,18 +21,24 @@ export const Kanban: QuartzTransformerPlugin = () => {
           // Use the smallest heading level that occurs more than once (if available), else the first level
           let colLevel = headingLevels.sort()[0]
           for (const lvl of headingLevels) {
-            if (headingLevels.filter((x: number) => x === lvl).length > 1) { 
-              colLevel = lvl; 
-              break 
+            if (headingLevels.filter((x: number) => x === lvl).length > 1) {
+              colLevel = lvl
+              break
             }
           }
           const colTag = "h" + colLevel
 
-          // Build new Kanban board element
+          // Build new Kanban board element with extra classes
           const boardEl = {
             type: "element",
             tagName: "div",
-            properties: { className: ["kanban-plugin__board"] },
+            properties: {
+              className: [
+                "kanban-plugin__board",
+                "kanban-plugin__horizontal",
+                "kanban-plugin__scroll-container"
+              ]
+            },
             children: [] as any[]
           }
 
@@ -69,14 +75,23 @@ export const Kanban: QuartzTransformerPlugin = () => {
               }
               laneWrapper.children.push(lane)
 
-              // Column header
+              // Build column header with nested wrappers (to match Obsidian)
               const header = {
                 type: "element",
                 tagName: "div",
                 properties: { className: ["kanban-plugin__lane-header-wrapper"] },
                 children: [] as any[]
               }
-              // Lane title element: wrap heading text nodes in a <p>
+              // Replicate nested structure:
+              // <div class="kanban-plugin__lane-title">
+              //   <div class="kanban-plugin__lane-title-text">
+              //     <div class="kanban-plugin__markdown-preview-wrapper">
+              //       <div class="markdown-preview-view markdown-rendered kanban-plugin__markdown-preview-view">
+              //         <p dir="auto">...title text...</p>
+              //       </div>
+              //     </div>
+              //   </div>
+              // </div>
               const titleEl = {
                 type: "element",
                 tagName: "div",
@@ -84,9 +99,30 @@ export const Kanban: QuartzTransformerPlugin = () => {
                 children: [
                   {
                     type: "element",
-                    tagName: "p",
-                    properties: {},
-                    children: titleTextNodes
+                    tagName: "div",
+                    properties: { className: ["kanban-plugin__lane-title-text"] },
+                    children: [
+                      {
+                        type: "element",
+                        tagName: "div",
+                        properties: { className: ["kanban-plugin__markdown-preview-wrapper"] },
+                        children: [
+                          {
+                            type: "element",
+                            tagName: "div",
+                            properties: { className: ["markdown-preview-view", "markdown-rendered", "kanban-plugin__markdown-preview-view"] },
+                            children: [
+                              {
+                                type: "element",
+                                tagName: "p",
+                                properties: { dir: "auto" },
+                                children: titleTextNodes
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -100,8 +136,8 @@ export const Kanban: QuartzTransformerPlugin = () => {
                 properties: {
                   className: [
                     "kanban-plugin__lane-items",
-                    "kanban-plugin__scroll-container",
-                    "kanban-plugin__vertical"
+                    "kanban-plugin__vertical",
+                    "kanban-plugin__scroll-container"
                   ]
                 },
                 children: [] as any[]
@@ -124,9 +160,7 @@ export const Kanban: QuartzTransformerPlugin = () => {
                     )
                     if (checkboxIndex !== -1) {
                       const checkbox = listItem.children[checkboxIndex]
-                      // Cast properties as any to access 'checked'
                       checked = (checkbox.properties as any).checked ?? false
-                      // Remove the checkbox from the content; we'll reinsert it
                       listItem.children.splice(checkboxIndex, 1)
                     }
                   }
@@ -137,7 +171,25 @@ export const Kanban: QuartzTransformerPlugin = () => {
                     contentNodes = contentNodes[0].children
                   }
 
-                  // Build card element
+                  // Build card element with extra wrappers:
+                  // <div class="kanban-plugin__item-wrapper">
+                  //   <div class="kanban-plugin__item">
+                  //     <div class="kanban-plugin__item-content-wrapper">
+                  //       <div class="kanban-plugin__item-title-wrapper">
+                  //         [if task: <div class="kanban-plugin__item-prefix-button-wrapper"><input ... /></div>]
+                  //         <div class="kanban-plugin__item-title">
+                  //           <div class="kanban-plugin__markdown-preview-wrapper kanban-plugin__item-markdown">
+                  //             <div class="markdown-preview-view markdown-rendered kanban-plugin__markdown-preview-view">
+                  //               <p dir="auto">...card content...</p>
+                  //             </div>
+                  //           </div>
+                  //           <div class="kanban-plugin__item-metadata"></div>
+                  //         </div>
+                  //         <div class="kanban-plugin__item-postfix-button-wrapper">...</div>
+                  //       </div>
+                  //     </div>
+                  //   </div>
+                  // </div>
                   const cardWrapper = {
                     type: "element",
                     tagName: "div",
@@ -154,7 +206,6 @@ export const Kanban: QuartzTransformerPlugin = () => {
                   }
                   cardWrapper.children.push(card)
 
-                  // Card content container
                   const cardContent = {
                     type: "element",
                     tagName: "div",
@@ -190,14 +241,48 @@ export const Kanban: QuartzTransformerPlugin = () => {
                     titleWrapper.children.push(prefix)
                   }
 
-                  // Card content markdown container
+                  // Build the card markdown content with extra wrappers
                   const contentContainer = {
                     type: "element",
                     tagName: "div",
-                    properties: { className: ["kanban-plugin__item-markdown"] },
-                    children: contentNodes
+                    properties: { className: ["kanban-plugin__markdown-preview-wrapper", "kanban-plugin__item-markdown"] },
+                    children: [
+                      {
+                        type: "element",
+                        tagName: "div",
+                        properties: { className: ["markdown-preview-view", "markdown-rendered", "kanban-plugin__markdown-preview-view"] },
+                        children: [
+                          {
+                            type: "element",
+                            tagName: "p",
+                            properties: { dir: "auto" },
+                            children: contentNodes
+                          }
+                        ]
+                      }
+                    ]
                   }
                   titleWrapper.children.push(contentContainer)
+                  
+                  // Add an (empty) metadata container to match Obsidian's structure
+                  const metadataContainer = {
+                    type: "element",
+                    tagName: "div",
+                    properties: { className: ["kanban-plugin__item-metadata"] },
+                    children: []
+                  }
+                  // Append metadata container after title content
+                  titleWrapper.children.push(metadataContainer)
+
+                  // Optionally, add a postfix button wrapper (if needed for your style)
+                  const postfixWrapper = {
+                    type: "element",
+                    tagName: "div",
+                    properties: { className: ["kanban-plugin__item-postfix-button-wrapper"] },
+                    children: [] as any[]
+                  }
+                  titleWrapper.children.push(postfixWrapper)
+
                   cardContent.children.push(titleWrapper)
                   card.children.push(cardContent)
                   itemsContainer.children.push(cardWrapper)
@@ -209,7 +294,7 @@ export const Kanban: QuartzTransformerPlugin = () => {
             }
           }
 
-          // If we assembled at least one column, replace original content with the board
+          // Replace original Kanban sections with the board
           if (boardEl.children.length > 0) {
             const firstColIndex = children.findIndex(
               (node: any) => node.type === "element" && node.tagName === colTag
