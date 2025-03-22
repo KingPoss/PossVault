@@ -8,7 +8,7 @@ The following is a guide on how to cold start the RBMK-1000 Nuclear reactor with
 
 You can download the simulator [here](https://github.com/gdzx/chernobyl-simulator)
 
-CONDENSER CIRCULATING WATER PUMPS
+### CONDENSER CIRCULATING WATER PUMPS
 1. Start Condenser Circulating Water Pumps 1 and 2
 ### WATER TREATMENT PUMPS AND CONDENSATE STORAGE
 2. Start Water Treatment Pumps 1 and 2, and open associated flow valves
