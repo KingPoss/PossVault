@@ -1,5 +1,5 @@
 ---
-title: Cold Start RBMK-1000 Reactor
+title: How to Cold Start the RBMK-1000 Reactor
 draft: false
 tags:
   - misc
