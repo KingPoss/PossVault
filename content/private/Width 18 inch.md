@@ -22,3 +22,6 @@ Possum/fox
 Jerma and glueman
 17 inches long
 11 inches wide
+
+Bed width: 59 inches
+Bed length: 80 inches
