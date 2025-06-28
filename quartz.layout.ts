@@ -2,17 +2,15 @@ import { PageLayout, SharedLayout, FullPageLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 import CustomPageWrapper from "./quartz/components/CustomPageWrapper"
 
-// components shared across all pages
+
+// 🧩 Required default Quartz layout exports
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
-  footer: Component.Footer({
-    links: {},
-  }),
+  footer: Component.Footer({ links: {} }),
 }
 
-// components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),
@@ -33,7 +31,6 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 }
 
-// components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),
@@ -50,15 +47,17 @@ export const defaultListPageLayout: PageLayout = {
   right: [],
 }
 
-// ✅ Add a fullPageLayout to override default layout rendering
-export const fullPageLayout: FullPageLayout = {
+// ✅ Your custom layout to inject <main> and <aside>
+const fullPageLayout: FullPageLayout = {
   head: Component.Head(),
   header: [],
   beforeBody: [],
-  pageBody: CustomPageWrapper, // ⬅️ All content wrapped in your <main>
+  pageBody: CustomPageWrapper,
   afterBody: [],
   left: defaultContentPageLayout.left,
   right: defaultContentPageLayout.right,
   footer: Component.Footer({ links: {} }),
 }
+
+// 🔥 This gets picked up automatically when you run `npx quartz build`
 export default fullPageLayout

@@ -1,6 +1,6 @@
 import { QuartzComponentProps } from "./types"
 
-const CustomPageWrapper = ({ children }: QuartzComponentProps) => {
+export default function CustomPageWrapper({ children }: QuartzComponentProps) {
   return (
     <div className="page-shell">
       <aside id="quartz-left" />
@@ -9,5 +9,3 @@ const CustomPageWrapper = ({ children }: QuartzComponentProps) => {
     </div>
   )
 }
-
-export default CustomPageWrapper

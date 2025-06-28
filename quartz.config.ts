@@ -1,7 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 import { Kanban } from "./quartz/plugins/transformers/kanban"
-import fullPageLayout from "./quartz.layout" 
 /**
  * Quartz 4.0 Configuration
  *
@@ -21,7 +20,6 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: true,
-    layout: fullPageLayout,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
