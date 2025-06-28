@@ -61,3 +61,4 @@ export const fullPageLayout: FullPageLayout = {
   right: defaultContentPageLayout.right,
   footer: Component.Footer({ links: {} }),
 }
+export default fullPageLayout
