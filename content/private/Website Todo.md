@@ -3,7 +3,7 @@
 
 1.  Set footer to always sit at bottom of webpage regardless of `<main>` size.
 2.  I  think more time-based theme stuff would be cool. certain things only appearing on the weekend, or on certain days when I broadcast. Maybe set up some more elements to appear
-
+3. Possibly add alternate theme(s), esp since all colors n such are currently being supplied w/ variables in css. (this will not work for elements like the tockify calendar/cbox widget)
 
 # Index
 1. Create more ads to go on the bulletin
@@ -49,7 +49,8 @@ Possibly scrap projects page? it's irritating to update as it's so different, an
 Possibly drop as well - Reassess the importance of this page/how much I update it. I could keep it going elsewhere under knowledge base, this way it's easier for me to update and keep track of. Otherwise, remake from blank.html template
 
 # Cool sites
-Remake page from blank.html template
+1. Remake page from blank.html template
+2. Update, clean up old entries, readd paintkiller, add new ppl
 
 # Guestbook
 Remake page from blank.html template. Do I really want the guestbook in it's current iteration? I like it, but it's also dependent on google (i mean so is my calendar), and I cant censor slurs from coming through. The vector of putting something malicious like an IPGrabber/screamer in the website field is also not lost on me, since all it displays is 'website', and some people may not think before they click. I of course get updates near instantly when someone posts something, and it's not like I receive that much web traffic, but is it something I really want? 
