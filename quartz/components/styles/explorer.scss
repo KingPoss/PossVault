@@ -16,6 +16,7 @@
       box-sizing: border-box;
       position: sticky;
       background-color: var(--def-element-background);
+      border-radius: 20px;
       padding: 1rem 0 1rem 0;
       border-radius: 10px;
       margin: 0;
@@ -239,7 +240,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       left: 0;
       margin-top: 0;
       background-color: var(--darkpurple);
-      border-radius: 10px;
+      border-radius: 20px;
       transform: translateX(-100vw);
       transition:
         transform 200ms ease,
