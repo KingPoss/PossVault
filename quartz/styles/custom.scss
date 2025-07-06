@@ -634,7 +634,7 @@ section,
   font-family: 'inky_thin_pixelsregular';
   color: var(--rotayellow);
   font-size: 2rem;
-  line-height: 1.8rem;
+  line-height: 2.1rem;
 }
 
 a {
@@ -745,6 +745,10 @@ hr {
   border-width: 2px;
   background-color: var(--lightpurple);
   background-image: var(--default-body-background);
+  scrollbar-width: thin;
+  scrollbar-color: var(--rotayellow) #ff612d5d;
+  scrollbar-gutter: auto;
+
 }
 .search>#search-container>#search-space>#search-layout>#results-container .result-card:hover,
 .search>#search-container>#search-space>#search-layout>#results-container .result-card:focus,
