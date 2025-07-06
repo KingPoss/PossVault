@@ -677,6 +677,11 @@ h6 {
   color: var(--rotayellow);
 }
 
+.folder-container div>a:hover {
+  color: var(--rotaorange);
+  font-size: 1.2rem;
+}
+
 .folder-container div>a:hover::after {
   color: var(--rotayellow);
   font-size: 1.2rem;
