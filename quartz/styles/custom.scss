@@ -666,11 +666,12 @@ h6 {
 
 .folder-container div button span {
   font-family: 'inky_thin_pixelsregular';
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--rotayellow);
 }
-.folder-container:hover{
-  text-decoration: underline;
+
+.folder-container:hover::after {
+  content: "?";
 }
 
 .folder-outer
