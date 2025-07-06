@@ -746,8 +746,10 @@ hr {
   background-color: var(--lightpurple);
   background-image: var(--default-body-background);
 }
-.search>#search-container>#search-space>#search-layout>#results-container .result-card:hover{
-  background-color: var(--darkpurple);
+.search>#search-container>#search-space>#search-layout>#results-container .result-card:hover,
+.search>#search-container>#search-space>#search-layout>#results-container .result-card:focus,
+.search>#search-container>#search-space>#search-layout>#results-container .result-card.focus {
+  background:var(--darkpurple)
 }
 .folder-outer
   /*@settings
