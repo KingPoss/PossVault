@@ -653,7 +653,10 @@ h6 {
   color: var(--rotayellow);
 
 }
-
+.center {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .page { 
   background-color: var(--darkpurple);
   background-image: var(--default-body-background);
