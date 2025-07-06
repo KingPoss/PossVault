@@ -4,6 +4,7 @@
   .page > #quartz-body {
     // Shift page position when toggling Explorer on mobile.
     & > :not(.sidebar.left:has(.explorer)) {
+      transform: translateX(0);
       transition: transform 300ms ease-in-out;
     }
     &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
@@ -15,15 +16,12 @@
     .sidebar.left:has(.explorer) {
       box-sizing: border-box;
       position: sticky;
-      background-color: var(--def-element-background);
-      border-radius: 10px;
-      border-style: solid;
-      border-color: var(--rotaviolet);
-      border-width: 2px;
-      margin-top: 0.8rem;
+      background-color: var(--light);
     }
 
-    .hide-until-loaded ~ .explorer-content {
+    // Hide Explorer on mobile until done loading.
+    // Prevents ugly animation on page load.
+    .hide-until-loaded ~ #explorer-content {
       display: none;
     }
   }
@@ -31,23 +29,9 @@
 
 .explorer {
   display: flex;
+  height: 100%;
   flex-direction: column;
   overflow-y: hidden;
-
-  min-height: 1.2rem;
-  flex: 0 1 auto;
-  &.collapsed {
-    flex: 0 1 1.2rem;
-    & .fold {
-      transform: rotateZ(-90deg);
-    }
-  }
-
-  & .fold {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-    opacity: 0.8;
-  }
 
   @media all and ($mobile) {
     order: -1;
@@ -55,24 +39,22 @@
     overflow: hidden;
     flex-shrink: 0;
     align-self: flex-start;
-    margin-top: auto;
-    margin-bottom: auto;
   }
 
-  button.mobile-explorer {
+  button#mobile-explorer {
     display: none;
   }
 
-  button.desktop-explorer {
+  button#desktop-explorer {
     display: flex;
   }
 
   @media all and ($mobile) {
-    button.mobile-explorer {
-      display: none;
+    button#mobile-explorer {
+      display: flex;
     }
 
-    button.desktop-explorer {
+    button#desktop-explorer {
       display: none;
     }
   }
@@ -83,18 +65,22 @@
     }
   }
 
-  svg {
-    pointer-events: all;
-    transition: transform 0.35s ease;
-
-    & > polyline {
-      pointer-events: none;
-    }
-  }
+  /*&:after {
+    pointer-events: none;
+    content: "";
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(transparent 0px, var(--light));
+  }*/
 }
 
-button.mobile-explorer,
-button.desktop-explorer {
+button#mobile-explorer,
+button#desktop-explorer {
   background-color: transparent;
   border: none;
   text-align: left;
@@ -125,7 +111,6 @@ button.desktop-explorer {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease-in-out;
-  font-size: 0.9rem;
 }
 
 .folder-outer.open {
@@ -136,45 +121,51 @@ button.desktop-explorer {
   overflow: hidden;
 }
 
-.explorer-content {
+#explorer-content {
   list-style: none;
   overflow: hidden;
   overflow-y: auto;
+  max-height: 0px;
+  transition:
+    max-height 0.35s ease,
+    visibility 0s linear 0.35s;
   margin-top: 0.5rem;
+  visibility: hidden;
+
+  &.collapsed {
+    max-height: 100%;
+    transition:
+      max-height 0.35s ease,
+      visibility 0s linear 0s;
+    visibility: visible;
+  }
 
   & ul {
     list-style: none;
-    margin: 0;
+    margin: 0.08rem 0;
     padding: 0;
-    overscroll-behavior: contain;
+    transition:
+      max-height 0.35s ease,
+      transform 0.35s ease,
+      opacity 0.2s ease;
 
     & li > a {
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
-
-      &.active {
-        opacity: 1;
-        color: var(--tertiary);
-      }
     }
   }
 
-  .folder-outer {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-in-out;
+  > #explorer-ul {
+    max-height: none;
   }
+}
 
-  .folder-outer.open {
-    grid-template-rows: 1fr;
-  }
+svg {
+  pointer-events: all;
 
-  .folder-outer > ul {
-    overflow: hidden;
-    margin-left: 6px;
-    padding-left: 0.8rem;
-    border-left: 1px solid var(--lightgray);
+  & > polyline {
+    pointer-events: none;
   }
 }
 
@@ -210,7 +201,7 @@ button.desktop-explorer {
     font-family: var(--headerFont);
 
     & span {
-      font-size: 1rem;
+      font-size: 0.95rem;
       display: inline-block;
       color: var(--secondary);
       font-weight: $semiBoldWeight;
@@ -227,7 +218,6 @@ button.desktop-explorer {
   cursor: pointer;
   transition: transform 0.3s ease;
   backface-visibility: visible;
-  flex-shrink: 0;
 }
 
 li:has(> .folder-outer:not(.open)) > .folder-container > svg {
@@ -238,46 +228,36 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   color: var(--tertiary);
 }
 
+.no-background::after {
+  background: none !important;
+}
+
+#explorer-end {
+  // needs height so IntersectionObserver gets triggered
+  height: 4px;
+  // remove default margin from li
+  margin: 0;
+}
+
 .explorer {
   @media all and ($mobile) {
-    &.collapsed {
-      flex: 0 0 34px;
-
-      & > .explorer-content {
-        transform: translateX(-100vw);
-        visibility: hidden;
-      }
-    }
-
-    &:not(.collapsed) {
-      flex: 0 0 34px;
-
-      & > .explorer-content {
-        transform: translateX(0);
-        visibility: visible;
-      }
-    }
-
-    .explorer-content {
+    #explorer-content {
       box-sizing: border-box;
+      overscroll-behavior: none;
       z-index: 100;
       position: absolute;
       top: 0;
-      background-color: var(--def-element-background);
+      background-color: var(--light);
       max-width: 100dvw;
       left: -100dvw;
       width: 100%;
       transition: transform 300ms ease-in-out;
       overflow: hidden;
       padding: $topSpacing 2rem 2rem;
-      height: 95dvh;
-      max-height: 95dvh;
-      margin-top: 1rem;
+      height: 100dvh;
+      max-height: 100dvh;
+      margin-top: 0;
       visibility: hidden;
-      border-radius: 20px;
-      border-style: solid;
-      border-width: 2px;
-      border-color: var(--def-border-color);
 
       &:not(.collapsed) {
         transform: translateX(100dvw);
@@ -288,22 +268,50 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
         max-height: 100%;
         width: 100%;
       }
+
+      &.collapsed {
+        transform: translateX(0);
+        visibility: visible;
+      }
     }
 
-    .mobile-explorer {
-      margin: 0;
-      padding: 5px;
+    #mobile-explorer {
+      margin: 5px;
       z-index: 101;
+
+      &:not(.collapsed) .lucide-menu {
+        transform: rotate(-90deg);
+        transition: transform 200ms ease-in-out;
+      }
 
       .lucide-menu {
         stroke: var(--darkgray);
+        transition: transform 200ms ease;
+
+        &:hover {
+          stroke: var(--dark);
+        }
       }
     }
   }
 }
 
-.mobile-no-scroll {
-  @media all and ($mobile) {
-    overscroll-behavior: none;
+.no-scroll {
+  opacity: 0;
+  overflow: hidden;
+}
+
+html:has(.no-scroll) {
+  overflow: hidden;
+}
+
+@media all and not ($mobile) {
+  .no-scroll {
+    opacity: 1 !important;
+    overflow: auto !important;
+  }
+
+  html:has(.no-scroll) {
+    overflow: auto !important;
   }
 }
