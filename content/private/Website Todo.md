@@ -53,7 +53,7 @@ Possibly drop as well - Reassess the importance of this page/how much I update i
 2. Update, clean up old entries, readd paintkiller, add new ppl
 
 # Guestbook
-Remake page from blank.html template. Do I really want the guestbook in it's current iteration? I like it, but it's also dependent on google (i mean so is my calendar), and I cant censor slurs from coming through. The vector of putting something malicious like an IPGrabber/screamer in the website field is also not lost on me, since all it displays is 'website', and some people may not think before they click. I of course get updates near instantly when someone posts something, and it's not like I receive that much web traffic, but is it something I really want? 
+Remake page from blank.html template. Do I really want the guestbook in it's current iteration? I like it, but it's also dependent on google (i mean so is my calendar), and I cant censor slurs from coming through. The vector of putting somethig malicious like an IPGrabber/screamer in the website field is also notn lost on me, since all it displays is 'website', and some people may not think before they click. I of course get updates near instantly when someone posts something, and it's not like I receive that much web traffic, but is it something I really want? 
 
 Possibly figure out if there's another way to do the guest book that isn't dependent on these free guestbook services. (self host?) or figure out if I can have a script that runs on edit in google sheets that will automatically delete any entry w/ a slur detected. that brings to light more questions:
 
