@@ -580,6 +580,15 @@ body {
     font-size: 1.1rem;
   
   }
+
+    @font-face {
+    font-family: 'inky_thin_pixelsregular';
+    src: url('/static/inky_thin_pixels-webfont.woff2') format('woff2'),
+         url('/static/inky_thin_pixels-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
 // places var(--bodyFont) is used.
 body,
 section,
@@ -589,7 +598,9 @@ section,
   font-family: "retron2000regular";
 }
 
-
+.page-title .folder-button .article-title { 
+  font-family: "inky_thin_pixelsregular";
+}
 
   /*@settings
   name: Image Adjustments
