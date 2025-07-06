@@ -69,7 +69,7 @@
 
   @media all and ($mobile) {
     button.mobile-explorer {
-      display: flex;
+      display: none;
     }
 
     button.desktop-explorer {
