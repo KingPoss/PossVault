@@ -655,7 +655,7 @@ h6 {
 }
 
 .page { 
-  background-color: var(--darkpurple);
+  background-color: var(--lightpurple);
   background-image: var(--default-body-background);
   border-style: outset;
   border-width: 3px;
@@ -666,7 +666,6 @@ h6 {
   outline-offset: -6px;
   outline-color: var(--def-border-color);
 }
-
 
 .folder-container div>a {
 
@@ -761,16 +760,6 @@ hr {
   color: var(--rotayellow);
 }
 
-.explorer .explorer-content {
-  width: 92vw;
-  background-color: var(--darkpurple);
-  background-image: var(--default-body-background);
-  border-radius: 20px;
-  border-style: solid;
-  border-color: var(--def-border-color);
-  padding: 4rem 0.2rem;
-
-}
 
 .folder-outer
   /*@settings
