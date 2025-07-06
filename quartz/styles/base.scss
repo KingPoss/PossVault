@@ -32,8 +32,13 @@ html {
   text-size-adjust: none;
   overflow-x: hidden;
   width: 100vw;
-}
+  box-sizing: border-box;
+  scrollbar-gutter: auto;
 
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 body,
 section {
   margin: 0;
