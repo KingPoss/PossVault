@@ -654,6 +654,7 @@ h6 {
 }
 
 .page { 
+  background-color: var(--lightpurple);
   background-image: var(--default-body-background);
   border-style: outset;
   border-width: 3px;
@@ -721,7 +722,23 @@ hr {
 .search .search-button{ 
   background-color: var(--def-element-background);
   border-radius: 10px;
+  border-color: var(--def-border-color);
+  border-style: solid;
+  border-width: 2px;
+}
 
+#search-space input {
+  background-color: var(--def-element-background);
+  border-radius: 10px;
+  border-color: var(--def-border-color);
+  border-style: solid;
+  border-width: 2px;
+  font-family: 'retron2000regular';
+}
+
+#search-layout .display-results {
+  background-color: var(--lightpurple);
+  background-image: var(--default-body-background);
 }
 .folder-outer
   /*@settings
