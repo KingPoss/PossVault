@@ -15,12 +15,9 @@
     .sidebar.left:has(.explorer) {
       box-sizing: border-box;
       position: sticky;
-      background-color: var(--def-element-background);
-      border-radius: 10px;
-      border-style: solid;
-      border-color: var(--rotaviolet);
-      border-width: 2px;
-      margin-top: 0.8rem;
+      background-color: var(--light);
+      padding: 1rem 0 1rem 0;
+      margin: 0;
     }
 
     .hide-until-loaded ~ .explorer-content {
@@ -69,7 +66,7 @@
 
   @media all and ($mobile) {
     button.mobile-explorer {
-      display: none;
+      display: flex;
     }
 
     button.desktop-explorer {
@@ -109,31 +106,6 @@ button.desktop-explorer {
     display: inline-block;
     margin: 0;
   }
-
-  & .fold {
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-    opacity: 0.8;
-  }
-
-  &.collapsed .fold {
-    transform: rotateZ(-90deg);
-  }
-}
-
-.folder-outer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease-in-out;
-  font-size: 0.9rem;
-}
-
-.folder-outer.open {
-  grid-template-rows: 1fr;
-}
-
-.folder-outer > ul {
-  overflow: hidden;
 }
 
 .explorer-content {
@@ -210,7 +182,7 @@ button.desktop-explorer {
     font-family: var(--headerFont);
 
     & span {
-      font-size: 1rem;
+      font-size: 0.95rem;
       display: inline-block;
       color: var(--secondary);
       font-weight: $semiBoldWeight;
@@ -240,39 +212,45 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
 
 .explorer {
   @media all and ($mobile) {
-    /* keep the toggle button at 34px width */
-    & {
+    &.collapsed {
       flex: 0 0 34px;
+
+      & > .explorer-content {
+        transform: translateX(-100vw);
+        visibility: hidden;
+      }
     }
 
-    /* shared panel defaults: hidden off-screen */
-    > .explorer-content {
+    &:not(.collapsed) {
+      flex: 0 0 34px;
+
+      & > .explorer-content {
+        transform: translateX(0);
+        visibility: visible;
+      }
+    }
+
+    .explorer-content {
+      box-sizing: border-box;
+      z-index: 100;
       position: absolute;
       top: 0;
-      left: -100dvw;
-      width: 100dvw;
-      height: 95dvh;
-      box-sizing: border-box;
-      padding: $topSpacing 2rem 2rem;
-      background-color: var(--def-element-background);
-      border: 2px solid var(--def-border-color);
-      border-radius: 20px;
-      overflow-y: auto;
-      visibility: hidden;
+      left: 0;
+      margin-top: 0;
+      background-color: var(--light);
+      max-width: 100vw;
+      width: 100vw;
       transform: translateX(-100vw);
-      transition: transform 300ms ease-in-out,
-                  visibility 0s linear 300ms;
-      z-index: 100;
+      transition:
+        transform 200ms ease,
+        visibility 200ms ease;
+      overflow: hidden;
+      padding: 4rem 0 2rem 0;
+      height: 100dvh;
+      max-height: 100dvh;
+      visibility: hidden;
     }
 
-    /* when TSX sets data-collapsed="open", slide in */
-    &[data-collapsed="open"] > .explorer-content {
-      visibility: visible;
-      transform: translateX(0);
-      transition-delay: 0s;
-    }
-
-    /* mobile toggle icon */
     .mobile-explorer {
       margin: 0;
       padding: 5px;
@@ -284,6 +262,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     }
   }
 }
+
 .mobile-no-scroll {
   @media all and ($mobile) {
     overscroll-behavior: none;
