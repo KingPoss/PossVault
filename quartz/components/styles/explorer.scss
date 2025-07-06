@@ -279,11 +279,6 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       border-width: 2px;
       border-color: var(--def-border-color);
 
-      &:not(.collapsed) {
-        transform: translateX(100dvw);
-        visibility: visible;
-      }
-
       ul.overflow {
         max-height: 100%;
         width: 100%;
