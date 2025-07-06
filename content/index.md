@@ -1,6 +1,5 @@
 ---
-title: Welcome to the Possum Vault
+title: Welcome to my Knowledge Base!
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+Here you'll find all sorts of helpful articles on all sorts of things. Cooking, fishing, telecoms stuff, tools I use, etc etc! It's all pretty dang rad I'd say!

@@ -7,7 +7,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "The Possum Vault",
+    pageTitle: "KP Knowledge Base",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
