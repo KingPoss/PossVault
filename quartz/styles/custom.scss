@@ -664,12 +664,12 @@ h6 {
   outline-color: var(--def-border-color);
 }
 
-.folder-title {
+.folder-container span {
   font-family: 'inky_thin_pixelsregular';
   font-size: 1.4rem;
   color: var(--rotayellow);
 }
-.folder-title:hover{
+.folder-container:hover{
   text-decoration: underline;
 }
 
