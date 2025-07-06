@@ -734,7 +734,7 @@ hr {
   border-color: var(--def-border-color);
   border-style: solid;
   border-width: 2px;
-  background-color: var(--lightpurple);
+  background-color: var(--def-element-background);
 
 }
 
@@ -745,6 +745,9 @@ hr {
   border-width: 2px;
   background-color: var(--lightpurple);
   background-image: var(--default-body-background);
+}
+.search>#search-container>#search-space>#search-layout>#results-container .result-card{
+  background-color: var(--darkpurple);
 }
 .folder-outer
   /*@settings
