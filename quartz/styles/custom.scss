@@ -634,6 +634,7 @@ section,
   font-family: 'inky_thin_pixelsregular';
   color: var(--rotayellow);
   font-size: 2rem;
+  line-height: 1.8rem;
 }
 
 a {
@@ -726,27 +727,24 @@ hr {
   border-style: solid;
   border-width: 2px;
 }
+
 .search>#search-container>#search-space>input {
-    font-family: 'retron2000regular';
-
-}
-
-.search>#search-container>#search-space>* {
-  background-color: var(--lightpurple);
-  background-image: var(--default-body-background);
+  font-family: 'retron2000regular';
   border-radius: 10px;
   border-color: var(--def-border-color);
   border-style: solid;
   border-width: 2px;
-}
-#search-space input {
-  background-color: var(--def-element-background);
+  background-color: var(--lightpurple);
 
-  font-family: 'retron2000regular';
 }
 
-#search-layout .display-results {
-
+.search>#search-container>#search-space>#search-layout.display-results {
+  border-radius: 10px;
+  border-color: var(--def-border-color);
+  border-style: solid;
+  border-width: 2px;
+  background-color: var(--lightpurple);
+  background-image: var(--default-body-background);
 }
 .folder-outer
   /*@settings
