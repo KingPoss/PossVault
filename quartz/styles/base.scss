@@ -310,8 +310,8 @@ a {
         margin-right: 0;
       }
       @media all and ($mobile) {
-        margin-right: 0;
-        margin-left: 0;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
       }
     }
     & footer {
