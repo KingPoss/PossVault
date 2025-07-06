@@ -671,6 +671,8 @@ h6 {
 }
 
 .folder-container:hover::after {
+  color: var(--rotayellow);
+  font-size: 1.2rem;
   content: "?";
 }
 
