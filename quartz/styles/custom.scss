@@ -664,7 +664,16 @@ h6 {
   outline-color: var(--def-border-color);
 }
 
+.folder-title {
+  font-family: 'inky_thin_pixelsregular';
+  font-size: 1.4rem;
+  color: var(--rotayellow);
+}
+.folder-title:hover{
+  text-decoration: underline;
+}
 
+.folder-outer
   /*@settings
   name: Image Adjustments
   id: image-adjustments
