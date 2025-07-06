@@ -222,7 +222,7 @@ a {
 
     @media all and not ($desktop) {
       padding: 0rem;
-      border-radius: 10px;
+      border-radius: 20px;
       background-color: var(--def-element-background);
     }
     @media all and ($mobile) {
