@@ -29,14 +29,14 @@ export const defaultContentPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
-        { Component: Component.Darkmode() },
       ],
     }),
     Component.Explorer(),
+  ],
+  right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
-  right: [],
 }
 
 export const defaultListPageLayout: PageLayout = {
