@@ -3,7 +3,6 @@ import * as Component from "./quartz/components"
 import CustomPageWrapper from "./quartz/components/CustomPageWrapper"
 
 
-// 🧩 Required default Quartz layout exports
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
@@ -47,7 +46,6 @@ export const defaultListPageLayout: PageLayout = {
   right: [],
 }
 
-// ✅ Your custom layout to inject <main> and <aside>
 const fullPageLayout: FullPageLayout = {
   head: Component.Head(),
   header: [],
@@ -59,5 +57,4 @@ const fullPageLayout: FullPageLayout = {
   footer: Component.Footer({ links: {} }),
 }
 
-// 🔥 This gets picked up automatically when you run `npx quartz build`
 export default fullPageLayout
