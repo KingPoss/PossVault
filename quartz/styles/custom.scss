@@ -677,6 +677,10 @@ h6 {
   content: "?";
 }
 
+.folder-outer.open{ 
+  font-weight: 400;
+}
+
 .folder-icon {
   color: var(--rotayellow);
 }
@@ -702,6 +706,15 @@ a.internal.tag-link {
 .toc h3{
   font-family: 'retron2000regular';
   font-size: 1.5rem;
+}
+
+hr {
+  color: var(--def-border-color);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-radius: 20px;
 }
 .folder-outer
   /*@settings
