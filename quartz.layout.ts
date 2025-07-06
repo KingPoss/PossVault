@@ -3,7 +3,6 @@ import * as Component from "./quartz/components"
 import CustomPageWrapper from "./quartz/components/CustomPageWrapper"
 
 
-// 🧩 Required default Quartz layout exports
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
@@ -13,7 +12,10 @@ export const sharedPageComponents: SharedLayout = {
 
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.Breadcrumbs(),
+    Component.ConditionalRender({
+      component: Component.Breadcrumbs(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
@@ -21,14 +23,21 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+          grow: true,
+        },
+        { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
+      ],
+    }),
     Component.Explorer(),
-  ],
-  right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
+  right: [],
 }
 
 export const defaultListPageLayout: PageLayout = {
@@ -40,14 +49,20 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+          grow: true,
+        },
+        { Component: Component.Darkmode() },
+      ],
+    }),
     Component.Explorer(),
   ],
   right: [],
 }
 
-// ✅ Your custom layout to inject <main> and <aside>
 const fullPageLayout: FullPageLayout = {
   head: Component.Head(),
   header: [],
@@ -59,5 +74,4 @@ const fullPageLayout: FullPageLayout = {
   footer: Component.Footer({ links: {} }),
 }
 
-// 🔥 This gets picked up automatically when you run `npx quartz build`
 export default fullPageLayout
