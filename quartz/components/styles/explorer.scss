@@ -16,7 +16,6 @@
     .sidebar.left:has(.explorer) {
       box-sizing: border-box;
       position: sticky;
-      background-color: var(--light);
     }
 
     // Hide Explorer on mobile until done loading.
