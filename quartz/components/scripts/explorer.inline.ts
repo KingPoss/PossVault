@@ -23,12 +23,8 @@ let currentExplorerState: Array<FolderState>
 function toggleExplorer(this: HTMLElement) {
   const nearestExplorer = this.closest(".explorer") as HTMLElement
   if (!nearestExplorer) return
-   const explorerCollapsed = nearestExplorer.classList.toggle("collapsed");
-   // Toggle the content panel's collapsed state for mobile slide-in/out
-   const content = nearestExplorer.querySelector(".explorer-content");
-   if (content) {
-     content.classList.toggle("collapsed");
-   }  nearestExplorer.setAttribute(
+  const explorerCollapsed = nearestExplorer.classList.toggle("collapsed")
+  nearestExplorer.setAttribute(
     "aria-expanded",
     nearestExplorer.getAttribute("aria-expanded") === "true" ? "false" : "true",
   )
@@ -279,7 +275,7 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     if (!mobileExplorer) return
 
     if (mobileExplorer.checkVisibility()) {
-      explorer.querySelector(".explorer-content")?.classList.add("collapsed");
+      explorer.classList.add("collapsed")
       explorer.setAttribute("aria-expanded", "false")
 
       // Allow <html> to be scrollable when mobile explorer is collapsed
