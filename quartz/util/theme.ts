@@ -28,7 +28,8 @@ export interface Theme {
 
 export type ThemeKey = keyof Colors
 
-const DEFAULT_SANS_SERIF = 'retron2000regular'
+const DEFAULT_SANS_SERIF =
+  '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
 const DEFAULT_MONO = "ui-monospace, SFMono-Regular, SF Mono, Menlo, monospace"
 
 export function googleFontHref(theme: Theme) {
@@ -54,14 +55,7 @@ ${stylesheet.join("\n\n")}
   --headerFont: "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
   --bodyFont: "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
   --codeFont: "${theme.typography.code}", ${DEFAULT_MONO};
-  @font-face {
-  font-family: 'retron2000regular';
-  src: url('/assets/fonts/retron2000-webfont.woff2') format('woff2'),
-        url('/assets/fonts/retron2000-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
+  
 }
 
 :root[saved-theme="dark"] {
