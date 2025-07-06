@@ -246,7 +246,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       z-index: 100;
       position: absolute;
       top: 0;
-      background-color: var(--light);
+      background-color: var(--def-element-background);
       max-width: 100dvw;
       left: -100dvw;
       width: 100%;
@@ -257,6 +257,10 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       max-height: 100dvh;
       margin-top: 0;
       visibility: hidden;
+      border-radius: 20px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: var(--def-border-color);
 
       &:not(.collapsed) {
         transform: translateX(100dvw);
