@@ -598,8 +598,13 @@ section,
   font-family: "retron2000regular";
 }
 
-.page-title .folder-button .article-title { 
-  font-family: "inky_thin_pixelsregular";
+.page-title {
+    font-family: 'inky_thin_pixelsregular';
+  color: var(--rotared);
+}
+.article-title {
+  font-family: 'inky_thin_pixelsregular';
+  color: var(--rotayellow);
 }
 
   /*@settings
