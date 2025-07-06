@@ -650,6 +650,7 @@ h4,
 h5,
 h6 {
   color: var(--rotayellow);
+
 }
 
 .page { 
@@ -687,7 +688,21 @@ h6 {
   color: var(--rotayellow);
 }
 
+a.internal.tag-link {
+  background-color: var(--def-element-background);
+}
+.content-meta {
+  color: var(--def-detail-color);
+}
 
+.title-button {
+  font-family: 'retron2000regular';
+  font-size: 1.5rem;
+}
+.toc h3{
+  font-family: 'retron2000regular';
+  font-size: 1.5rem;
+}
 .folder-outer
   /*@settings
   name: Image Adjustments
