@@ -754,6 +754,15 @@ hr {
 .search>#search-container>#search-space>#search-layout>#results-container .result-card.focus {
   background:var(--darkpurple)
 }
+
+
+.explorer-content ul li>a.active {
+  color: var(--rotayellow);
+}
+
+button#mobile-explorer { display: none; }
+button#desktop-explorer { display: flex; }
+
 .folder-outer
   /*@settings
   name: Image Adjustments

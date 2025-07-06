@@ -75,7 +75,7 @@ export default ((userOpts?: Partial<Options>) => {
       >
         <button
           type="button"
-          class="explorer-toggle mobile-explorer hide-until-loaded"
+          id="mobile-explorer" class="explorer-toggle hide-until-loaded"
           data-mobile={true}
           aria-controls="explorer-content"
         >
@@ -96,7 +96,8 @@ export default ((userOpts?: Partial<Options>) => {
         </button>
         <button
           type="button"
-          class="title-button explorer-toggle desktop-explorer"
+          id="desktop-explorer" 
+          class="title-button explorer-toggle" 
           data-mobile={false}
           aria-expanded={true}
         >
@@ -116,7 +117,7 @@ export default ((userOpts?: Partial<Options>) => {
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </button>
-        <div class="explorer-content" aria-expanded={false}>
+        <div class="explorer-content collapsed" aria-expanded="false">
           <OverflowList class="explorer-ul" />
         </div>
         <template id="template-file">
