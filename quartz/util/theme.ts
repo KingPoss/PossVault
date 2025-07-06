@@ -53,8 +53,16 @@ ${stylesheet.join("\n\n")}
   --textHighlight: ${theme.colors.lightMode.textHighlight};
 
   --headerFont: "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
-  --bodyFont: "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
+  --bodyFont: "${theme.typography.body}", "retron2000regular";
   --codeFont: "${theme.typography.code}", ${DEFAULT_MONO};
+  @font-face {
+  font-family: 'retron2000regular';
+  src: url('/assets/fonts/retron2000-webfont.woff2') format('woff2'),
+        url('/assets/fonts/retron2000-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 }
 
 :root[saved-theme="dark"] {
@@ -69,4 +77,6 @@ ${stylesheet.join("\n\n")}
   --textHighlight: ${theme.colors.darkMode.textHighlight};
 }
 `
+
+
 }
