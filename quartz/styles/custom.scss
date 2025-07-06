@@ -655,7 +655,7 @@ h6 {
 }
 
 .page { 
-  background-color: var(--lightpurple);
+  background-color: var(--darkpurple);
   background-image: var(--default-body-background);
   border-style: outset;
   border-width: 3px;
@@ -665,6 +665,14 @@ h6 {
   outline-width: 1px;
   outline-offset: -6px;
   outline-color: var(--def-border-color);
+}
+
+.page>#quartz-body .sidebar.left:has(.explorer) {
+  background-color: var(--def-element-background);
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  margin-top: 0.1rem;
 }
 
 .folder-container div>a {
@@ -758,6 +766,17 @@ hr {
 
 .explorer-content ul li>a.active {
   color: var(--rotayellow);
+}
+
+.explorer .explorer-content {
+  max-width: 29.7rem;
+  background-color: var(--darkpurple);
+  background-image: var(--default-body-background);
+  border-radius: 20px;
+  border-style: solid;
+  border-color: var(--def-border-color);
+  padding: 4rem 0.2rem;
+
 }
 
 .folder-outer
