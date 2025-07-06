@@ -726,7 +726,14 @@ hr {
   border-style: solid;
   border-width: 2px;
 }
+.search>#search-container>#search-space>input {
+    font-family: 'retron2000regular';
 
+}
+
+.search>#search-container>#search-space>* {
+  background-color: var(--def-element-background)
+}
 #search-space input {
   background-color: var(--def-element-background);
   border-radius: 10px;
