@@ -240,39 +240,56 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
 
 .explorer {
   @media all and ($mobile) {
-    /* keep the toggle button at 34px width */
-    & {
+    &.collapsed {
       flex: 0 0 34px;
+
+      & > .explorer-content {
+        transform: translateX(-100vw);
+        visibility: hidden;
+      }
     }
 
-    /* shared panel defaults: hidden off-screen */
-    > .explorer-content {
+    &:not(.collapsed) {
+      flex: 0 0 34px;
+
+      & > .explorer-content {
+        transform: translateX(0);
+        visibility: visible;
+      }
+    }
+
+    .explorer-content {
+      box-sizing: border-box;
+      z-index: 100;
       position: absolute;
       top: 0;
-      left: -100dvw;
-      width: 100dvw;
-      height: 95dvh;
-      box-sizing: border-box;
-      padding: $topSpacing 2rem 2rem;
       background-color: var(--def-element-background);
-      border: 2px solid var(--def-border-color);
-      border-radius: 20px;
-      overflow-y: auto;
+      max-width: 100dvw;
+      left: -100dvw;
+      width: 100%;
+      transition: transform 300ms ease-in-out;
+      overflow: hidden;
+      padding: $topSpacing 2rem 2rem;
+      height: 95dvh;
+      max-height: 95dvh;
+      margin-top: 1rem;
       visibility: hidden;
-      transform: translateX(-100vw);
-      transition: transform 300ms ease-in-out,
-                  visibility 0s linear 300ms;
-      z-index: 100;
+      border-radius: 20px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: var(--def-border-color);
+
+      &:not(.collapsed) {
+        transform: translateX(100dvw);
+        visibility: visible;
+      }
+
+      ul.overflow {
+        max-height: 100%;
+        width: 100%;
+      }
     }
 
-    /* when TSX sets data-collapsed="open", slide in */
-    &[data-collapsed="open"] > .explorer-content {
-      visibility: visible;
-      transform: translateX(0);
-      transition-delay: 0s;
-    }
-
-    /* mobile toggle icon */
     .mobile-explorer {
       margin: 0;
       padding: 5px;
@@ -284,6 +301,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     }
   }
 }
+
 .mobile-no-scroll {
   @media all and ($mobile) {
     overscroll-behavior: none;
