@@ -746,7 +746,7 @@ hr {
   background-color: var(--lightpurple);
   background-image: var(--default-body-background);
 }
-.search>#search-container>#search-space>#search-layout>#results-container .result-card{
+.search>#search-container>#search-space>#search-layout>#results-container .result-card:hover{
   background-color: var(--darkpurple);
 }
 .folder-outer
