@@ -667,13 +667,14 @@ h6 {
   outline-color: var(--def-border-color);
 }
 
-.folder-container div button span {
+.folder-container div>a {
+
   font-family: 'inky_thin_pixelsregular';
   font-size: 1.2rem;
   color: var(--rotayellow);
 }
 
-.folder-container:hover::after {
+.folder-container div>a:hover::after {
   color: var(--rotayellow);
   font-size: 1.2rem;
   content: "?";
