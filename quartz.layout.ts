@@ -26,6 +26,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
+  right: [],
 }
 
 export const defaultListPageLayout: PageLayout = {
@@ -41,6 +42,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.Explorer(),
   ],
+  right: [],
 }
 
 const fullPageLayout: FullPageLayout = {
@@ -50,6 +52,7 @@ const fullPageLayout: FullPageLayout = {
   pageBody: CustomPageWrapper,
   afterBody: [],
   left: defaultContentPageLayout.left,
+  right: defaultContentPageLayout.right,
   footer: Component.Footer({ links: {} }),
 }
 
