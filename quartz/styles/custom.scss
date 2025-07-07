@@ -813,6 +813,11 @@ hr {
   border-left-color: var(--rotayellow);
 }
 
+.explorer .mobile-explorer .lucide-menu {
+    stroke:var(--rotalightorange);
+    scale:1.5;
+  }
+
 .left.sidebar {
   padding-top: 1rem;
 }
