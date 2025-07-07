@@ -771,13 +771,18 @@ hr {
 .explorer-content ul li>a.active {
   color: var(--rotaorange);
 }
+.explorer-content ul li>a.active::before{
+  color: var(--rotaorange);
+  content: "! ";
+}
+
 .explorer-content ul li>a:hover{
   color: var(--rotalightorange);
 }
 
 .explorer-content ul li>a::before {
-  color: var(--rotayellow);
-  content: "-";
+  color: var(--rotaorange);
+  content: "• ";
 }
 .explorer-content .folder-outer>ul {
   border-left-style: dashed;
