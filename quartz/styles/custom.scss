@@ -780,6 +780,11 @@ hr {
   color: var(--rotalightorange);
 }
 
+.explorer-content ul li>a:hover::before{
+  color: var(--rotalightorange);
+  content: "? ";
+}
+
 .explorer-content ul li>a::before {
   color: var(--rotaorange);
   content: "• ";
