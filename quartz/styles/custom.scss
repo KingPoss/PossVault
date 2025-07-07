@@ -674,7 +674,9 @@ h6 {
   outline-width: 1px;
   outline-offset: -6px;
   outline-color: var(--def-border-color);
+  margin-inline: auto;
   max-width: 1464px;
+  inline-size: clamp(0rem, 100%, 90rem);
 }
 
 .folder-container div>a {
