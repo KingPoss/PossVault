@@ -810,7 +810,7 @@ hr {
   background-color: var(--def-element-background); 
   border-color: var(--def-border-color);
   border-style: solid;
-  border-width: 2px;
+  border-width: 5px;
 
 }
 
@@ -859,6 +859,11 @@ hr {
   padding-top: 1rem;
 
 }
+
+.popover>.popover-inner {
+background-color: var(--def-element-background);
+}
+
 
 .folder-outer
   /*@settings
