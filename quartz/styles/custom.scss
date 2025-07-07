@@ -781,16 +781,27 @@ hr {
 
 
 }
-.search>#search-container>#search-space>#search-layout>#results-container .result-card:hover,
-.search>#search-container>#search-space>#search-layout>#results-container .result-card:focus,
-.search>#search-container>#search-space>#search-layout>#results-container .result-card.focus {
-  background-color:var(--darkpurple);
+
+.search>.search-container>.search-space>input{
+  border-color: var(--def-border-color);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  color: white;
 }
+
+.search>.search-container>.search-space>.search-layout>.results-container .result-card:hover,
+.search>.search-container>.search-space>.search-layout>.results-container .result-card:focus,
+.search>.search-container>.search-space>.search-layout>.results-container .result-card.focus {
+  background:var(--lightpurple)
+}
+
 .search>.search-container>.search-space>* {
   background-color: var(--def-element-background); 
   border-color: var(--def-border-color);
   border-style: solid;
   border-width: 2px;
+
 }
 
 .explorer-content ul li>a {
