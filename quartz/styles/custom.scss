@@ -679,12 +679,12 @@ h6 {
 }
 
 .folder-container div>a:hover {
-  color: var(--rotaorange);
+  color: var(--rotalightorange);
   font-size: 1.2rem;
 }
 
 .folder-container div>a:hover::after {
-  color: var(--rotayellow);
+  color: var(--rotalightorange);
   font-size: 1.2rem;
   content: "?";
 }
@@ -769,7 +769,7 @@ hr {
   color: var(--rotaorange);
 }
 .explorer-content ul li>a:hover{
-  color: var(--rotaorange);
+  color: var(--rotalightorange);
 }
 
 .left.sidebar {
