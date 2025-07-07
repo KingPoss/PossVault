@@ -4,7 +4,7 @@ draft: false
 tags:
   - misc
 ---
-Indigo Plant / "Substation'
+Indigo Plant / "Substation"
 ![[indigo.jpg]]
 Indigo is a simple cycle peaker plant located out in north palm springs, consisting of 3 power generation units.
 Its fuel is natural gas, and the generation units themselves are GE Vernova LM6000-PC Aeroderivative Gas Turbines. Each one can output up to 51 MWs, but in total, Indigo outputs 135 MWs nominally.
@@ -31,6 +31,9 @@ Finally the exhaust, now cooled and cleaned, is let out into the atmosphere, con
 
 
 # Ammonia Injection Grid (AIG):
+
+^34a26c
+
 ![[EmissionReduction.png]]
 
 ![[Pasted image 20250509192948.png]]
