@@ -784,7 +784,7 @@ hr {
 .search>#search-container>#search-space>#search-layout>#results-container .result-card:hover,
 .search>#search-container>#search-space>#search-layout>#results-container .result-card:focus,
 .search>#search-container>#search-space>#search-layout>#results-container .result-card.focus {
-  background:var(--darkpurple)
+  background-color:var(--darkpurple);
 }
 
 .explorer-content ul li>a {
