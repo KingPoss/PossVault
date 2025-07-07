@@ -23,14 +23,9 @@ tags:
 
 
 [[How to tie the Alberto Knot]] 
-
-
 ![[public/assets/indigo.jpg]]
-
 ![[Indigo Substation & Related Emissions Systems#^34a26c]]
-
 ^id
-
 [^1]
 
 [^1]: a new footnote bexample
