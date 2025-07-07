@@ -726,6 +726,10 @@ a.internal.tag-link {
 .toc a{
   font-weight: 400;
 }
+.toc a::before{
+  color: var(--rotalightorange);
+  content: "• ";
+}
 
 hr {
   color: var(--def-border-color);
