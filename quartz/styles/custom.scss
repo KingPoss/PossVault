@@ -655,9 +655,14 @@ h6 {
 }
 .center {
   padding-right: 0.9rem;
-  padding-top: 1rem;
+  margin-top: -5rem;
 
 }
+
+.page>#quartz-body .sidebar {
+  padding-top: 1rem;
+}
+
 .page { 
   background-color: var(--darkpurple);
   background-image: var(--default-body-background);
