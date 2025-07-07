@@ -866,7 +866,9 @@ border-style: solid;
 border-color: var(--def-border-color);
 }
 
-
+pre {
+  padding: 0;
+}
 pre code {
   background-color: var(--darkpurple);
   color: white;
