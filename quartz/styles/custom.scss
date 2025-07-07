@@ -774,6 +774,11 @@ hr {
 .explorer-content ul li>a:hover{
   color: var(--rotalightorange);
 }
+
+.explorer-content ul li>a::before {
+  color: var(--rotayellow);
+  content: "-";
+}
 .explorer-content .folder-outer>ul {
   border-left-style: dashed;
   border-left-width: 1px;
