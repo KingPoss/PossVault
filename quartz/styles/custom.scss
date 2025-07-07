@@ -655,6 +655,7 @@ h6 {
 }
 .center {
   padding-right: 0.9rem;
+  padding-top: 1rem;
 
 }
 .page { 
@@ -765,7 +766,18 @@ hr {
 
 
 .explorer-content ul li>a.active {
-  color: var(--rotayellow);
+  color: var(--rotaorange);
+}
+.explorer-content ul li>a:hover{
+  color: var(--rotaorange);
+}
+
+.left.sidebar {
+  padding-top: 1rem;
+}
+.right.sidebar {
+  padding-top: 1rem;
+
 }
 
 .folder-outer
