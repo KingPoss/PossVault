@@ -774,10 +774,10 @@ hr {
 .explorer-content ul li>a:hover{
   color: var(--rotalightorange);
 }
-.explorer-content ul li{
-  border-left-color: var(--rotayellow);
+.explorer-content .folder-outer>ul {
   border-left-style: dashed;
   border-left-width: 1px;
+  border-left-color: var(--rotayellow);
 }
 
 .left.sidebar {
