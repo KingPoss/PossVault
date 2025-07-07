@@ -718,6 +718,9 @@ h6 {
 
 a.internal.tag-link {
   background-color: var(--def-element-background);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--def-border-color);
 }
 .content-meta {
   color: var(--def-detail-color);
