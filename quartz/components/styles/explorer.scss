@@ -1,6 +1,9 @@
 @use "../../styles/variables.scss" as *;
 
 @media all and ($mobile) {
+  .center {
+    padding-top: -3rem;
+  }
   .page > #quartz-body {
     // Shift page position when toggling Explorer on mobile.
     & > :not(.sidebar.left:has(.explorer)) {
