@@ -697,6 +697,9 @@ h6 {
 .folder-icon {
   color: var(--rotayellow);
 }
+.folder-icon:hover{
+  color: var(--rotalightorange);
+}
 .fold {
   color: var(--rotayellow);
 
@@ -770,6 +773,11 @@ hr {
 }
 .explorer-content ul li>a:hover{
   color: var(--rotalightorange);
+}
+.explorer-content {
+  border-left-color: var(--rotayellow);
+  border-left-style: dashed;
+  border-left-width: 1px;
 }
 
 .left.sidebar {
