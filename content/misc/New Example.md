@@ -48,3 +48,26 @@ code block example
 | ---------- | --------- |
 | Max        | Planck    |
 | Marie      | Curie     |
+
+text
+*italics text*
+**bold text**
+***bold italics text***
+# header
+dsfadfasf
+
+## header
+fdfdfd
+
+### header
+sdjfsdjfsjfghk
+s
+
+- list of stuff
+- list
+- list
+- list
+1. list of numbers
+2. list
+3. list
+4. list
