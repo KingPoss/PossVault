@@ -624,6 +624,7 @@ section,
 .popover > .popover-inner,
 .search > .search-container > .search-space > input {
   font-family: "retron2000regular";
+  
 }
 
 .page-title a{
@@ -677,6 +678,8 @@ h6 {
   margin-inline: auto;
   max-width: 1464px;
   inline-size: clamp(0rem, 100%, 90rem);
+  margin-left: 223.5px;
+  margin-right: 223.5px;
 }
 
 .folder-container div>a {
