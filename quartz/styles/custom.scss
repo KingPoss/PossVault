@@ -746,13 +746,16 @@ hr {
   border-top-width: 3px;
   border-radius: 20px;
 }
-
+.search {
+  margin-right: 1rem;
+}
 .search .search-button{ 
   background-color: var(--def-element-background);
   border-radius: 10px;
   border-color: var(--def-border-color);
   border-style: solid;
   border-width: 2px;
+
 }
 
 .search>#search-container>#search-space>input {
