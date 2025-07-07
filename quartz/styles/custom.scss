@@ -869,7 +869,7 @@ border-color: var(--def-border-color);
 pre {
   padding: 0;
   border-color: var(--def-border-color);
-  
+
 }
 pre code {
   background-color: var(--darkpurple);
@@ -877,6 +877,11 @@ pre code {
   border-color: var(--def-border-color);
 }
 
+strong {
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
 
 .folder-outer
   /*@settings
