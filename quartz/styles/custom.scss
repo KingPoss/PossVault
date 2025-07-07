@@ -767,6 +767,10 @@ hr {
   background:var(--darkpurple)
 }
 
+.explorer-content ul li>a {
+  color: white;
+  font-weight: 400;
+}
 
 .explorer-content ul li>a.active {
   color: var(--rotaorange);
