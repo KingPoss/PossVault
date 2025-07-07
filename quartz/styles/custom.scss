@@ -861,7 +861,9 @@ hr {
 }
 
 .popover>.popover-inner {
-background-color: var(--def-element-background);
+background-color: var(--darkpurple);
+border-style: solid;
+border-color: var(--def-border-color);
 }
 
 
