@@ -22,11 +22,11 @@ section {
   box-sizing: border-box;
 
   font-family: var(--bodyFont);
-  color: white;
+  color: var(--darkgray);
 }
 
 .text-highlight {
-  background-color: white;
+  background-color: var(--textHighlight);
   padding: 0 0.1rem;
   border-radius: 5px;
 }
@@ -47,7 +47,7 @@ ul,
 .katex,
 .math {
   color: rgb(255, 255, 255);
-  fill: rgb(255, 255, 255);
+  fill: var(--darkgray);
   hyphens: auto;
 }
 

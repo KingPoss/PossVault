@@ -730,7 +730,9 @@ a.internal.tag-link {
   color: var(--rotalightorange);
   content: "• ";
 }
-
+ul.toc-content.overflow>li>a {
+  color: white;
+}
 hr {
   color: var(--def-border-color);
   border-bottom-style: solid;
@@ -777,6 +779,7 @@ hr {
 .explorer-content ul li>a {
   color: white;
   font-weight: 400;
+  opacity: 100;
 }
 
 .explorer-content ul li>a.active {
