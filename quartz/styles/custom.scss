@@ -73,7 +73,15 @@ body {
       --med-tall: 450px;
       --tall: 500px;
     }
-
+  .navbar {
+    display: none;
+  }
+  .headerflex {
+    display: none;
+  }
+  .topnav {
+    display: flex;
+  }
   }
   @media (hover: none) and (pointer: coarse) {
   .navbar {
