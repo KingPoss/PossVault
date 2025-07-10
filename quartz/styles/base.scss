@@ -11,18 +11,17 @@ html {
   width: 100vw;
   box-sizing: border-box;  
 }
-
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 body,
 section {
-  margin: 0;
   box-sizing: border-box;
 
   font-family: var(--bodyFont);
   color: var(--darkgray);
 }
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+
 .text-highlight {
   background-color: var(--textHighlight);
   padding: 0 0.1rem;
