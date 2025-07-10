@@ -73,19 +73,8 @@ body {
       --med-tall: 450px;
       --tall: 500px;
     }
-
+    
   }
-  @media (hover: none) and (pointer: coarse) {
-  .navbar {
-    display: none;
-  }
-  .headerflex {
-    display: none;
-  }
-  .topnav {
-    display: flex;
-  }
-}
   /*-Image Sizing-*/
   /*Fit image within bounds WITHOUT stretching*/
   img:is([alt*=cover], [alt*=cvr]),
