@@ -85,7 +85,6 @@ body {
     visibility: hidden;
   }
   #myTopnav {
-    display: none;
     visibility: visible;
   }
 }
@@ -98,7 +97,7 @@ body {
     display: none;
   }
   .topnav {
-    display: flex;
+    visibility: visible;
   }
 }
   /*-Image Sizing-*/
