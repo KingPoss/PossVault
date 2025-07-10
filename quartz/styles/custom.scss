@@ -83,8 +83,8 @@ body {
     display: flex;
   }
   }
-  @media (hover: none) and (pointer: coarse) {
-  .navbar {
+@media all and ($mobile) {
+    .navbar {
     display: none;
   }
   .headerflex {
