@@ -276,15 +276,15 @@ export function renderPage(
           </a>
 
           <div id="myLinks">
-            <a href="kingposs.com/index">Home</a>
-            <a href="kingposs.com/about">About Me</a>
-            <a href="kingposs.com/art">Art/Media</a>
-            <a href="kingposs.com/blog">Blog</a>
-            <a href="kingposs.com/radio">Radio</a>
+            <a href="https://kingposs.com/index">Home</a>
+            <a href="https://kingposs.com/about">About Me</a>
+            <a href="https://kingposs.com/art">Art/Media</a>
+            <a href="https://kingposs.com/blog">Blog</a>
+            <a href="https://kingposs.com/radio">Radio</a>
             <a href="kb.kingposs.com">Knowledge Base</a>
-            <a href="kingposs.com/programs">Programs</a>
-            <a href="#kingposs.com/sites">Cool Sites</a>
-            <a href="kingposs.com/guestbook">Guestbook</a>
+            <a href="https://kingposs.com/programs">Programs</a>
+            <a href="https://kingposs.com/sites">Cool Sites</a>
+            <a href="https://kingposs.com/guestbook">Guestbook</a>
           </div>
 
           <a href="javascript:void(0);" className="icon" id="icon">
@@ -294,15 +294,15 @@ export function renderPage(
 
         {/* Desktop navigation */}
         <nav className="navbar">
-            <a href="kingposs.com/index">Home</a>
-            <a href="kingposs.com/about">About Me</a>
-            <a href="kingposs.com/art">Art/Media</a>
-            <a href="kingposs.com/blog">Blog</a>
-            <a href="kingposs.com/radio">Radio</a>
+            <a href="https://kingposs.com/index">Home</a>
+            <a href="https://kingposs.com/about">About Me</a>
+            <a href="https://kingposs.com/art">Art/Media</a>
+            <a href="https://kingposs.com/blog">Blog</a>
+            <a href="https://kingposs.com/radio">Radio</a>
             <a href="kb.kingposs.com">Knowledge Base</a>
-            <a href="kingposs.com/programs">Programs</a>
-            <a href="#kingposs.com/sites">Cool Sites</a>
-            <a href="kingposs.com/guestbook">Guestbook</a>
+            <a href="https://kingposs.com/programs">Programs</a>
+            <a href="https://kingposs.com/sites">Cool Sites</a>
+            <a href="https://kingposs.com/guestbook">Guestbook</a>
         </nav>
       </>
 
