@@ -1219,3 +1219,13 @@ footer {
 footer img{
   padding: 0;
 }
+
+/*Swing*/
+.h-swing:hover{
+  animation-name: swing;
+      -webkit-animation-name: swing;
+      -moz-animation-name: swing;
+  animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+}
