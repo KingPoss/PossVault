@@ -271,7 +271,7 @@ export function renderPage(
         {/* Mobile navigation */}
         <div className="topnav" id="myTopnav">
           <a href="/index.html" className="active">
-            <img src="/assets/mobileheader.gif" alt="" />
+            <img src="/assets/mobileheader.webp" alt="" />
             <div className="rainbow">The Possum Den</div>
           </a>
 
