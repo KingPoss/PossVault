@@ -361,6 +361,22 @@ export function renderPage(
 
   `
 }} />
+<style dangerouslySetInnerHTML={{ __html: `
+  @media (max-width: 800px) {
+    .navbar {
+      display: none;
+      visibility: hidden;
+    }
+    .headerflex {
+      display: none;
+      visibility: hidden;
+    }
+    .topnav {
+      display: flex;
+      visibility: visible;
+    }
+  }
+` }} />
       {pageResources.js
         .filter((resource) => resource.loadTime === "afterDOMReady")
         .map((res) => JSResourceToScriptElement(res))}
