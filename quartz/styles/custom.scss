@@ -1207,3 +1207,13 @@ strong {
 .mobileheaderimage {
   margin-bottom: 0;
 }
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  padding-top: 0.3rem;
+}
