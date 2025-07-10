@@ -305,30 +305,7 @@ export function renderPage(
             <a href="kingposs.com/guestbook">Guestbook</a>
         </nav>
       </>
-     <script dangerouslySetInnerHTML={{
-  __html: `
-    console.log('script loaded')
 
-    function myFunction() {
-      const x = document.getElementById("myLinks")
-      const y = document.getElementById("icon")
-
-      if (x?.style.display === "block") {
-        x.style.display = "none"
-      } else {
-        x.style.display = "block"
-      }
-
-      document.getElementById("myTopnav")?.classList.toggle("responsive")
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      console.log("DOM fully loaded")
-      document.getElementById("icon")?.addEventListener("click", myFunction)
-    });
-
-  `
-}} />
  
       <body data-slug={slug}>
         <div id="quartz-root" class="page">
@@ -360,6 +337,30 @@ export function renderPage(
           </Body>
         </div>
       </body>
+           <script dangerouslySetInnerHTML={{
+  __html: `
+    console.log('script loaded')
+
+    function myFunction() {
+      const x = document.getElementById("myLinks")
+      const y = document.getElementById("icon")
+
+      if (x?.style.display === "block") {
+        x.style.display = "none"
+      } else {
+        x.style.display = "block"
+      }
+
+      document.getElementById("myTopnav")?.classList.toggle("responsive")
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("DOM fully loaded")
+      document.getElementById("icon")?.addEventListener("click", myFunction)
+    });
+
+  `
+}} />
       {pageResources.js
         .filter((resource) => resource.loadTime === "afterDOMReady")
         .map((res) => JSResourceToScriptElement(res))}
