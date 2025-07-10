@@ -307,19 +307,23 @@ export function renderPage(
       </>
      <script dangerouslySetInnerHTML={{
   __html: `
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      var y = document.getElementById("icon");
+    console.log('script loaded')
 
-      if (x.style.display === "block") {
-        x.style.display = "none";
+    function myFunction() {
+      const x = document.getElementById("myLinks")
+      const y = document.getElementById("icon")
+
+      if (x?.style.display === "block") {
+        x.style.display = "none"
       } else {
-        x.style.display = "block";
+        x.style.display = "block"
       }
-      document.getElementById("myTopnav").classList.toggle("responsive");
+
+      document.getElementById("myTopnav")?.classList.toggle("responsive")
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+      console.log("DOM fully loaded")
       document.getElementById("icon")?.addEventListener("click", myFunction)
     });
 
