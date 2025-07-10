@@ -78,11 +78,13 @@ body {
 @media all and (max-width: 800px) {
   .navbar {
     display: none;
+    visibility: hidden;
   }
   .headerflex {
     display: none;
+    visibility: hidden;
   }
-  .topnav {
+  #myTopnav {
     display: flex;
     visibility: visible;
   }
