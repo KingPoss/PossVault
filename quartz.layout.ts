@@ -5,8 +5,8 @@ import { CustomHeader} from "./quartz/components"
 
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [CustomHeader()],
-  afterBody: [CustomHeader()],
+  header: [],
+  afterBody: [],
   footer: Component.Footer({ links: {} }),
 }
 
@@ -19,6 +19,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    CustomHeader()
   ],
   left: [
     Component.PageTitle(),
