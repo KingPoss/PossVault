@@ -288,7 +288,7 @@ export function renderPage(
           </div>
 
           <a href="javascript:void(0);" className="icon" id="icon">
-            <div className="mobilemenu"><img src="/assets/burgermenu.svg" alt="" /></div>
+            <div className="mobilemenu"></div>
           </a>
         </div>
 
