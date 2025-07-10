@@ -305,6 +305,24 @@ export function renderPage(
             <a href="kingposs.com/guestbook">Guestbook</a>
         </nav>
       </>
+     <script dangerouslySetInnerHTML={{
+  __html: `
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  var y = document.getElementById("icon");
+
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  document.getElementById("myTopnav").classList.toggle("responsive");
+  
+} 
+
+  `
+}} />
+ 
       <body data-slug={slug}>
         <div id="quartz-root" class="page">
           <Body {...componentData}>
