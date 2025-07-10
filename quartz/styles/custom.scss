@@ -989,7 +989,6 @@ strong {
   
 .headerflex {
   border: none;
-  display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
@@ -1065,7 +1064,6 @@ strong {
 /*SITE NAVIGATION BAR*/
 
 .navbar {
-  display: flex;
   flex-wrap: wrap;               /* let items wrap to new lines */
   justify-content: center;       /* center each row under the one above */
   gap: 0.5rem;                   /* gutter between buttons/rows */
