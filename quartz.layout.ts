@@ -65,7 +65,7 @@ export const defaultListPageLayout: PageLayout = {
 const fullPageLayout: FullPageLayout = {
   head: Component.Head(),
   header: [],
-  beforeBody: [Component.CustomHeader()],
+  beforeBody: [],
   pageBody: CustomPageWrapper,
   afterBody: [],
   left: defaultContentPageLayout.left,
