@@ -307,18 +307,21 @@ export function renderPage(
       </>
      <script dangerouslySetInnerHTML={{
   __html: `
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  var y = document.getElementById("icon");
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      var y = document.getElementById("icon");
 
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-  document.getElementById("myTopnav").classList.toggle("responsive");
-  
-} 
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+      document.getElementById("myTopnav").classList.toggle("responsive");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("icon")?.addEventListener("click", myFunction)
+    });
 
   `
 }} />
