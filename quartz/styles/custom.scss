@@ -1222,9 +1222,7 @@ footer {
 footer img{
   padding: 0;
 }
-
-/*Swing*/
-.h-swing:hover{
+footer img:hover{
   animation-name: swing;
       -webkit-animation-name: swing;
       -moz-animation-name: swing;
