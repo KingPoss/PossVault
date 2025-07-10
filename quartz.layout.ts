@@ -19,7 +19,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
-    CustomHeader()
+  
   ],
   left: [
     Component.PageTitle(),
@@ -64,8 +64,8 @@ export const defaultListPageLayout: PageLayout = {
 
 const fullPageLayout: FullPageLayout = {
   head: Component.Head(),
-  header: [],
-  beforeBody: [CustomHeader()],
+  header: [Component.CustomHeader()],
+  beforeBody: [],
   pageBody: CustomPageWrapper,
   afterBody: [],
   left: defaultContentPageLayout.left,
