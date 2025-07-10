@@ -861,10 +861,10 @@ hr {
 .explorer-content ul li>a.active {
   color: var(--rotaorange);
 }
-.explorer-content ul li>a.active::before{
+/* .explorer-content ul li>a.active::before{
   color: var(--rotalightorange);
   content: "! ";
-}
+} */
 
 .explorer-content ul li>a:hover{
   color: var(--rotalightorange);
