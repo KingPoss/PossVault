@@ -89,6 +89,7 @@ body {
   #myTopnav {
     display: flex;
     visibility: visible;
+    margin-bottom: 0;
 
   }
 }
@@ -96,13 +97,18 @@ body {
 @media (hover: none) and (pointer: coarse) {
   .navbar{ 
     display: none;
+    visibility: hidden;
+    height: 0;
   }
   .headerflex {
     display: none;
+    visibility: hidden;
+    height: 0;
   }
-  .topnav {
+  #myTopnav {
     display: flex;
     visibility: visible;
+    margin-bottom: 0;
   }
 }
   /*-Image Sizing-*/
@@ -1134,6 +1140,7 @@ strong {
 
 .active {
   display: flex;
+  align-items: center;
 }
 .active img {
   height: 50px;
