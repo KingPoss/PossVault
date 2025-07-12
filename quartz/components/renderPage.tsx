@@ -271,7 +271,7 @@ export function renderPage(
         {/* Mobile navigation */}
         <div className="topnav" id="myTopnav">
           <a href="/index.html" className="active">
-            <img class="mobileheaderimage" src="/assets/mobileheader.gif" alt="" />
+            <img class="mobileheaderimage" src="/static/mobileheader.gif" alt="" />
             <div className="rainbow">The Possum Den</div>
           </a>
 
@@ -339,26 +339,26 @@ export function renderPage(
       </body>
       <footer>
   <a href="https://kingposs.com" target="_blank" rel="noopener noreferrer">
-    <img className="h-swing" src="/assets/buttons/PossBadge.gif" alt="" />
+    <img className="h-swing" src="/static/buttons/PossBadge.gif" alt="" />
   </a>
   <a href="https://neocities.org/" target="_blank" rel="noopener noreferrer">
-    <img className="h-swing" src="/assets/buttons/NeoCitiesGreen.gif" alt="" />
+    <img className="h-swing" src="/static/buttons/NeoCitiesGreen.gif" alt="" />
   </a>
   <a href="https://32bit.cafe/" target="_blank" rel="noopener noreferrer">
-    <img className="h-swing" src="/assets/buttons/32bitty.png" alt="" />
+    <img className="h-swing" src="/static/buttons/32bitty.png" alt="" />
   </a>
-  <img className="h-swing" src="/assets/buttons/twopaws.png" alt="" />
-  <img className="h-swing" src="/assets/buttons/piracy.png" alt="" />
-  <img className="h-swing" src="/assets/buttons/defund_badge.gif" alt="" />
-  <img className="h-swing" src="/assets/buttons/htmldream.gif" alt="" />
+  <img className="h-swing" src="/static/buttons/twopaws.png" alt="" />
+  <img className="h-swing" src="/static/buttons/piracy.png" alt="" />
+  <img className="h-swing" src="/static/buttons/defund_badge.gif" alt="" />
+  <img className="h-swing" src="/static/buttons/htmldream.gif" alt="" />
   <a href="https://archive.org/" target="_blank" rel="noopener noreferrer">
-    <img className="h-swing" src="/assets/buttons/internetarchive.gif" alt="" />
+    <img className="h-swing" src="/static/buttons/internetarchive.gif" alt="" />
   </a>
   <a href="https://modarchive.org/" target="_blank" rel="noopener noreferrer">
-    <img className="h-swing" src="/assets/buttons/modarchive.png" alt="" />
+    <img className="h-swing" src="/static/buttons/modarchive.png" alt="" />
   </a>
   <a href="subrosa.html" target="_blank" rel="noopener noreferrer">
-    <img className="h-swing" src="/assets/buttons/PossButtonRosa.gif" alt="" />
+    <img className="h-swing" src="/static/buttons/PossButtonRosa.gif" alt="" />
   </a>
 </footer>
            <script dangerouslySetInnerHTML={{
