@@ -1254,3 +1254,7 @@ article>thead>a[role=anchor] {
   color: gray;
   background-color:#0000
 }
+
+a.external .external-icon > path {
+  fill: lightgray;
+}
