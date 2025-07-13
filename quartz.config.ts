@@ -7,7 +7,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "KP Knowledge Base",
+    pageTitle: "KP's Brain Bank",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
