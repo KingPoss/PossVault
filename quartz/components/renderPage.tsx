@@ -282,7 +282,6 @@ export function renderPage(
             <a href="https://blog.kingposs.com">Blog</a>
             <a href="https://kingposs.com/radio">Radio</a>
             <a href="https://kb.kingposs.com">Brain Bank</a>
-            <a href="https://kingposs.com/programs">Programs</a>
             <a href="https://kingposs.com/sites">Cool Sites</a>
             <a href="https://kingposs.com/guestbook">Guestbook</a>
           </div>
@@ -300,7 +299,6 @@ export function renderPage(
             <a href="https://blog.kingposs.com">Blog</a>
             <a href="https://kingposs.com/radio">Radio</a>
             <a href="https://kb.kingposs.com">Brain Bank</a>
-            <a href="https://kingposs.com/programs">Programs</a>
             <a href="https://kingposs.com/sites">Cool Sites</a>
             <a href="https://kingposs.com/guestbook">Guestbook</a>
         </nav>
