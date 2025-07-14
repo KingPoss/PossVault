@@ -11,34 +11,34 @@ Click on FXS PORT1 and configure your settings accordingly:
 
 # Required settings
 
-- _**Primary SIP Server**_: servername.voip.ms (one of VoIP.ms multiple [_**servers**_](https://wiki.voip.ms/article/Choosing_Server#Choosing_a_Server "Choosing Server"), you can choose the one closest to your location.)
-- _**Failover SIP Server**_: (Please leave this Blank)
-- _**Outbound Proxy**_: servername.voip.ms (Use the same server you used as _**Primary SIP Server**_.  
+- **Primary SIP Server**: servername.voip.ms (one of VoIP.ms multiple [_**servers**_](https://wiki.voip.ms/article/Choosing_Server#Choosing_a_Server "Choosing Server"), you can choose the one closest to your location.)
+- **Failover SIP Server**: (Please leave this Blank)
+- **Outbound Proxy**: servername.voip.ms (Use the same server you used as **Primary SIP Server**.  
     _For firmware 1.0.15.4 and higher we recommend leaving blank the outbound proxy field_
-- _**NAT Traversal**_: Keep-Alive
-- _**SIP User ID**_: (Replace with your Main SIP account or Subaccount UserID, e.g. 100000 or 100000_sub)
-- _**Authenticate ID**_: (Replace with your Main SIP account or Subaccount UserID, e.g. 100000 or 100000_sub)
-- _**Authenticate Password**_: ****** (Use the SIP account password - By default this is the same as the Customer Portal)
-- _**Name**_: Outbound callerID Name* **See the requirements below.**
-- _**DNS Mode**_: A Record
-- _**SIP Registration**_: Yes
-- _**Unregister On Reboot**_: No
-- _**Outgoing Call Without Registration**_: Yes
-- _**Register Expiration**_: 5
-- _**Allow Incoming SIP Messages from SIP Proxy Only**_: Yes
-- _**Preferred DTMF method**_: SIP INFO, RFC2833, In-audio
-- _**Use P-Access-Network-Info Header**_: No
-- _**Use P-Emergency-info Header**_: No
-- _**Enable Call Features**_: No
-- _**Dial Plan**_: {[x*]+}
-- _**Preferred Vocoder**_: PCMU, PCMA, G729
-- _**Enable Pulse Dialing**_: Yes
-- _**Pulse Dialing Standard**_: General Standard
-- _**Enable Hook Flash**_: No
-- _**Enable High Ring Power**_: Yes
+- **NAT Traversal**: Keep-Alive
+- **SIP User ID**: (Replace with your Main SIP account or Subaccount UserID, e.g. 100000 or 100000_sub)
+- **Authenticate ID**: (Replace with your Main SIP account or Subaccount UserID, e.g. 100000 or 100000_sub)
+- **Authenticate Password**: ****** (Use the SIP account password - By default this is the same as the Customer Portal)
+- **Name**: Outbound callerID Name* **See the requirements below.**
+- **DNS Mode**: A Record
+- **SIP Registration**: Yes
+- **Unregister On Reboot**: No
+- **Outgoing Call Without Registration**: Yes
+- **Register Expiration**: 5
+- **Allow Incoming SIP Messages from SIP Proxy Only**: Yes
+- **Preferred DTMF method**: SIP INFO, RFC2833, In-audio
+- **Use P-Access-Network-Info Header**: No
+- **Use P-Emergency-info Header**: No
+- **Enable Call Features**: No
+- **Dial Plan**: {[x*]+}
+- **Preferred Vocoder**: PCMU, PCMA, G729
+- **Enable Pulse Dialing**: Yes
+- **Pulse Dialing Standard**: General Standard
+- **Enable Hook Flash**: No
+- **Enable High Ring Power**: Yes
 
 # Optional Settings
 
-- _**Gain RX**_: 0dB
-- _**Dial Tone**_: f1=600@-17,c=4/4;  
+- **Gain RX**: 0dB
+- **Dial Tone**: f1=600@-17,c=4/4;  
     this gives it the old dial tone sound
