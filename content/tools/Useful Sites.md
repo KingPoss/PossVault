@@ -19,22 +19,15 @@ tags:
 - [Railroad radio frequency list](https://dpdproductions.com/pages/railroad-frequencies-by-railroad)
 - [University of Twente WebSDR](http://websdr.ewi.utwente.nl:8901/)
 - [HAM callsign database/forum](https://www.qrz.com/)
-<<<<<<< HEAD
 - [Antenna calculators](https://www.steeman.org/Antenna/Antenna-Design-Calculators) - For calculating different antenna designs 
-=======
->>>>>>> fb66c17f2ed18b886978a7181f54f550b4da7011
 ## Media
 - [Archive.org](https://archive.org/) - From the wayback machine, to archives of old ROMS and programs.
 - [Anna's Archive](https://annas-archive.org/) - largest open library in human history
 - [Sci-Hub](https://sci-hub.se/) - research database, just enter the paper's DOI (no papers  scraped since 2022)
 - [Geocities Archive](https://geocities.restorativland.org/) - a restored visual gallery of archived geocities site by neighborhood
 - [Gifcities](https://gifcities.org/) - search for gifs archived from geocities
-<<<<<<< HEAD
 - [Textfile directory](http://www.textfiles.com/directory.html) - Archive of old text files, mainly 80s to mid 90s
 
 ## To be categorized
 - [The H.O.R.G](https://www.horg.com/horg/) - Holotypic Occulpanid Research Group
 - [175776](https://www.sbnation.com/a/17776-football/chapter-1) - What will football look like in the future?
-=======
-- 
->>>>>>> fb66c17f2ed18b886978a7181f54f550b4da7011
