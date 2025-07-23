@@ -30,6 +30,88 @@ jobs:
         run: npm rebuild
       - name: Build Quartz
         run: npx quartz build
+      
+      # Update main site RSS
+      - name: Update Main Site RSS
+        run: |
+          # Download current RSS from main site
+          if ! curl -f -o main-rss.xml https://kingposs.com/rss.xml; then
+            echo "WARNING: Could not download RSS from kingposs.com"
+            echo "Skipping RSS update"
+          else
+            echo "Successfully downloaded main RSS"
+            
+            # Parse the Quartz RSS feed to get the latest item
+            QUARTZ_RSS="public/index.xml"
+            
+            # Site name - customize for each repo
+            SITE_NAME="Brain Bank"
+            
+            # Install xmlstarlet
+            sudo apt-get install -y xmlstarlet
+            
+            # Verify Quartz RSS exists
+            if [ -f "$QUARTZ_RSS" ]; then
+              # Get the latest item from Quartz RSS
+              LATEST_TITLE=$(xmlstarlet sel -t -v "//item[1]/title" "$QUARTZ_RSS" 2>/dev/null || echo "")
+              LATEST_LINK=$(xmlstarlet sel -t -v "//item[1]/link" "$QUARTZ_RSS" 2>/dev/null || echo "")
+              LATEST_DESC=$(xmlstarlet sel -t -v "//item[1]/description" "$QUARTZ_RSS" 2>/dev/null || echo "")
+              
+              # Check if we got valid data and if it's not already in main RSS
+              if [[ -n "$LATEST_TITLE" && -n "$LATEST_LINK" ]]; then
+                if ! grep -q "<link>$LATEST_LINK</link>" main-rss.xml; then
+                  # Generate current date and unique GUID
+                  LATEST_DATE=$(date -R)
+                  GUID="${LATEST_LINK}-$(date +%s)"
+                  
+                  # Create the new RSS item
+                  NEW_ITEM="<item>"
+                  NEW_ITEM="$NEW_ITEM<title>$SITE_NAME: $LATEST_TITLE</title>"
+                  NEW_ITEM="$NEW_ITEM<link>$LATEST_LINK</link>"
+                  NEW_ITEM="$NEW_ITEM<description><![CDATA[$LATEST_DESC]]></description>"
+                  NEW_ITEM="$NEW_ITEM<pubDate>$LATEST_DATE</pubDate>"
+                  NEW_ITEM="$NEW_ITEM<guid>$GUID</guid>"
+                  NEW_ITEM="$NEW_ITEM</item>"
+                  
+                  # Insert new item into the downloaded RSS
+                  awk -v new_item="$NEW_ITEM" '
+                    { print }
+                    /atom:link.*\/>/ && !done {
+                      print "    " new_item
+                      done = 1
+                    }
+                  ' main-rss.xml > rss-updated.xml
+                  
+                  # Update lastBuildDate
+                  sed -i "s|<lastBuildDate>.*</lastBuildDate>|<lastBuildDate>$LATEST_DATE</lastBuildDate>|" rss-updated.xml
+                  
+                  # Deploy ONLY the RSS to Neocities
+                  echo "Deploying updated RSS to Neocities..."
+                  # Create a temp directory for just the RSS
+                  mkdir rss-deploy
+                  cp rss-updated.xml rss-deploy/rss.xml
+                  
+                  echo "RSS will be deployed to Neocities"
+                else
+                  echo "This post is already in the main RSS feed, skipping update"
+                fi
+              else
+                echo "Could not extract valid data from Quartz RSS"
+              fi
+            else
+              echo "Quartz RSS not found at $QUARTZ_RSS"
+            fi
+          fi
+      
+      # Deploy RSS to Neocities if it was updated
+      - name: Deploy RSS to Neocities
+        if: ${{ hashFiles('rss-deploy/rss.xml') != '' }}
+        uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: false
+          dist_dir: rss-deploy
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
