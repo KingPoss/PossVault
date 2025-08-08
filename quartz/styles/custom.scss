@@ -998,6 +998,7 @@ strong {
   
   
 .headerflex {
+
   border: none;
   display: flex;
   flex-wrap: wrap;
@@ -1011,6 +1012,7 @@ strong {
   color: transparent;
   /* 3) Slide it left by exactly one tile (1000px) over 8s */
   animation: slideRainbow 8s linear infinite;
+  
   background-image: repeating-linear-gradient(
     90deg,
     #ff3f2d   0px,    /* red start */
@@ -1027,8 +1029,12 @@ strong {
   );
 }
 .rainbow {
+    font-family: monospace;  // Keep monospace font
+  white-space: pre;         // Preserve ALL whitespace and line breaks exactly like <pre>
+  display: block;   
   margin-bottom: 0.1px;
   border: none;
+  margin-top: 12.8px;
 }
 #siteheader {
   min-width: 0;
