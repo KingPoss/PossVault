@@ -236,7 +236,7 @@ export function renderPage(
       <Head {...componentData} />
             <>
         <div className="headerflex">
-          <pre className="rainbow" id="siteheader">
+          <span className="rainbow" id="siteheader">
             {`88888888888 888    888 8888888888
     888     888    888 888       
     888     888    888 888       
@@ -245,8 +245,8 @@ export function renderPage(
     888     888    888 888       
     888     888    888 888       
     888     888    888 8888888888`}
-          </pre>
-          <pre className="rainbow" id="siteheader">
+          </span>
+          <span className="rainbow" id="siteheader">
             {`8888888b.   .d88888b.   .d8888b.   .d8888b.  888     888 888b     d888
 888   Y88b d88P" "Y88b d88P  Y88b d88P  Y88b 888     888 8888b   d8888
 888    888 888     888 Y88b.      Y88b.      888     888 88888b.d88888
@@ -255,8 +255,8 @@ export function renderPage(
 888        888     888       "888       "888 888     888 888  Y8P  888
 888        Y88b. .d88P Y88b  d88P Y88b  d88P Y88b. .d88P 888   "   888
 888         "Y88888P"   "Y8888P"   "Y8888P"   "Y88888P"  888       888`}
-          </pre>
-          <pre className="rainbow" id="siteheader">
+          </span>
+          <span className="rainbow" id="siteheader">
             {`8888888b.  8888888888 888b    888
 888  "Y88b 888        8888b   888
 888    888 888        88888b  888
@@ -265,7 +265,7 @@ export function renderPage(
 888    888 888        888  Y88888
 888  .d88P 888        888   Y8888
 8888888P"  8888888888 888    Y888`}
-          </pre>
+          </span>
         </div>
 
         {/* Mobile navigation */}
