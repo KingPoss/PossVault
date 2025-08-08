@@ -80,7 +80,7 @@ body {
     display: none;
     visibility: hidden;
     height: 0;
-    padding: 0;
+    padding-bottom: 0;
     margin: 0;
   }
   .headerflex {
@@ -100,6 +100,7 @@ body {
   .navbar{ 
     display: none;
     visibility: hidden;
+    padding-bottom: 0;
     height: 0;
   }
   .headerflex {
