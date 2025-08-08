@@ -1028,10 +1028,15 @@ strong {
     #ff3f2d  1000px    /* back to red at 100% */
   );
 }
-.rainbow {
-    font-family: monospace;  // Keep monospace font
+.rainbowdesktop { 
+  font-family: monospace;  // Keep monospace font
   white-space: pre;         // Preserve ALL whitespace and line breaks exactly like <pre>
   display: block;   
+  margin-bottom: 0.1px;
+  border: none;
+  margin-top: 12.8px;
+}
+.rainbow {
   margin-bottom: 0.1px;
   border: none;
   margin-top: 12.8px;

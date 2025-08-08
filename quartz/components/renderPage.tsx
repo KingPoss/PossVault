@@ -235,8 +235,48 @@ export function renderPage(
     <html lang={lang}>
       <Head {...componentData} />
             <>
-        <div className="headerflex">
-          <span className="rainbow" id="siteheader">
+<script dangerouslySetInnerHTML={{
+  __html: `
+    // Bearlytics Analytics with manual SPA support (ignoring hash navigation)
+    (function() {
+      let lastPathname = window.location.pathname;
+      
+      function loadBearlytics() {
+        // Remove existing Bearlytics script if it exists
+        const existingScript = document.querySelector('script[data-site="AYVHKFF"]');
+        if (existingScript) {
+          existingScript.remove();
+        }
+        
+        // Create and add new script
+        const script = document.createElement('script');
+        script.src = 'https://analytics.kingposs.com/script.js';
+        script.dataset.site = 'AYVHKFF';
+        script.defer = true;
+        
+        // Add a cache buster to force reload
+        script.src = script.src + '?t=' + Date.now();
+        
+        document.head.appendChild(script);
+      }
+      
+      // Load on initial page load
+      loadBearlytics();
+      
+      // Reload on Quartz SPA navigation (but not hash changes)
+      document.addEventListener('nav', function() {
+        // Only reload if the pathname actually changed (not just the hash)
+        if (window.location.pathname !== lastPathname) {
+          lastPathname = window.location.pathname;
+          setTimeout(() => {
+            loadBearlytics();
+          }, 100);
+        }
+      });
+    })();
+  `
+}} />         <div className="headerflex">
+          <span className="rainbowdesktop" id="siteheader">
             {`88888888888 888    888 8888888888
     888     888    888 888       
     888     888    888 888       
@@ -246,7 +286,7 @@ export function renderPage(
     888     888    888 888       
     888     888    888 8888888888`}
           </span>
-          <span className="rainbow" id="siteheader">
+          <span className="rainbowdesktop" id="siteheader">
             {`8888888b.   .d88888b.   .d8888b.   .d8888b.  888     888 888b     d888
 888   Y88b d88P" "Y88b d88P  Y88b d88P  Y88b 888     888 8888b   d8888
 888    888 888     888 Y88b.      Y88b.      888     888 88888b.d88888
@@ -256,7 +296,7 @@ export function renderPage(
 888        Y88b. .d88P Y88b  d88P Y88b  d88P Y88b. .d88P 888   "   888
 888         "Y88888P"   "Y8888P"   "Y8888P"   "Y88888P"  888       888`}
           </span>
-          <span className="rainbow" id="siteheader">
+          <span className="rainbowdesktop" id="siteheader">
             {`8888888b.  8888888888 888b    888
 888  "Y88b 888        8888b   888
 888    888 888        88888b  888
