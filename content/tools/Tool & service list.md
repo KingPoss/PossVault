@@ -4,7 +4,7 @@ draft: false
 tags:
   - tools
 ---
-## Owned tools/devices who's purpose and condition need to be documented
+- [ ] ## Owned tools/devices who's purpose and condition need to be documented
 - [ ] Grandstream HT802v1 Analog Telephone Adapter
 - [ ] NanoVNA Vector Network Analyzer
 - [ ] TinySA Spectrum Analyzer
