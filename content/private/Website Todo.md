@@ -58,6 +58,6 @@ Remake page from blank.html template. Do I really want the guestbook in it's cur
 Possibly figure out if there's another way to do the guest book that isn't dependent on these free guestbook services. (self host?) or figure out if I can have a script that runs on edit in google sheets that will automatically delete any entry w/ a slur detected. that brings to light more questions:
 
  - Is it possible to do this with regex without detecting words like 'night', etc etc?
- - If not, they will most likely just use basic substition or sub/super script to get away with writing it in a different way.
+ - [ ] If not, they will most likely just use basic substition or sub/super script to get away with writing it in a different way.VC 
  - this isn't the biggest issue, just annoying
  - current implementation of this does not gather IP or anything, so it is impossible to ban a ner-do-well from commenting on the guestbook ( of course there are ways around this, everyone has a vpn)
