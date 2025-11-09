@@ -2,7 +2,8 @@
 title: Cool telecoms resources
 draft: false
 tags:
-  - telecoms
+  - communications
+  - "#telecoms"
 ---
 # Cool telecoms sites, forums, and resources
 - [Telephone world](https://telephoneworld.org/)

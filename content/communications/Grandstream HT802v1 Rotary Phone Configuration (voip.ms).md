@@ -2,7 +2,8 @@
 title: How to set up Grandstream HT802v1 to use a rotary phone with VOIP.MS
 draft: false
 tags:
-  - telecoms
+  - communications
+  - "#telecoms"
 ---
 Gotten from the [voip.ms wiki](https://wiki.voip.ms/article/Grandstream_HandyTone_802_-_HT802), this YT vid from [Abraham Moller](https://www.youtube.com/watch?v=rktWAJB2EHU)
 

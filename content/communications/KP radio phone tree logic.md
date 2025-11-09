@@ -2,7 +2,8 @@
 title: KP radio phone tree logic
 draft: false
 tags:
-  - telecoms
+  - communications
+  - "#telecoms"
 ---
 # Phone tree logic for KPradio.net
 ![[phonetree.png]] 
