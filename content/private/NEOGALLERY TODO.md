@@ -1,0 +1,21 @@
+1. Move the '+ New post' button and the 'sort by' option down into the same bar where the tags are, on the right hand side with the new tag button. 
+2. Get rid of the floating 'Gallery' text, since it would be the only thing taking up
+3. Get rid of the button '-> Neocities' badge in the top right hand corner, and get rid of the 'neocities' badge that appears on gallery posts. its redundant and confusing.
+4. Add a 'delete' button in the form of a smaller red button with a trashcan on it. (MORE TO FLESH OUT. MAKE MOUSE A RETICLE, CLICK A POST (OR SEVERAL) AND HIT DELETE. IT BLOWS THEM UP OR SOMETHING)
+5. Get rid of the '+ New Tag' button entirely, and place a text field at the start of the tag list with the text 'new tag...' already in it. (dimmed, it goes away as soon as someone types). When they hit enter or a comma, add the tag to the END of the list.
+6. Instead of uploading tags to the site as soon as theyre created, how about we only upload the tag to the site if they upload an image. The image doesnt need to be tagged with the new tag for the tag to be uploaded to the json, just the image getting uploaded itself is enough. (or if we sync to neocities or whatever. I just wanna cut back on neocities API calls to be courteous).
+7. Since we're dropping the gallery page idea, it can just accept the tag itself with NO link or page specified. Since we're simplifying it, maybe we move the tags into media.json and just make an 'allTags' section under 'config'
+8. Instead of worrying about 'hosted pages' publishing, let's go embed mode only and fully flush out the feature. DO NOT delete the hosted pages code, but hide it from the interface, and leave comments in caps stating 'UNUSED, LEGACY FEATURE', that way I can bring it back if I want. 
+9. Get rid of the 'edit' and 'delete' buttons on the gallery posts, and the tags on the gallery page. We will replace them.
+10. Get rid of the 'post preview' modality, and make it open up the 'edit post' tab by default.
+11. Get rid of the 'Title' and 'Description' text above the text fields. Replace it with slightly dulled text *within* the input boxes that go away once the user types. like the 'whats on your mind?' thing that facebook did. 
+12. Make the image in the edit modal its full size (up to a reasonable amount), but don't make it small as hell the way it currently is, and dont make it clickable.
+13. Make the checkmark buttons for the tag sections on edit post and new post look more retro, maybe use the little round options like windows used to.
+
+14. Allow 'drop images anywhere' even when one image has already been dragged in. in its current state, i can only drag in multiple at the time. if I drag in one, and then try to drag in another, it doesnt add to it the way the 'add more' button does.
+15. Make the new post button 88x31px, as well as the 'new tag...' button/text field.
+16. Swap the 'new post, sort by, delete' section with the tag section. Tags should go on the right, the buttons go to the left. BUTTON ORDER: "New Post" "Delete" "Sort By"
+17. Make the tags no longer have # hashtags. also, allow spaces. it shouldn't have any issue with spaces.
+18. When you click on a tag, even if under a different 'sort by', the big bar above with the tag name, edit button, and post count should always appear. do not change the sort by, just silently change it back when they clear the filter. 
+19. This gives me the opportunity to add a big obvious COPY EMBED button that people can click to copy the tag embed to their clipboard. If it wasnt clear, add this to the tag-section-head element. also, add a delete trashcan icon there. keep the edit button here, but simplify it greatly since all we need now is the name of the tag. Clicking the edit button should just turn the pre-existing h2 header w/ the tag name into an editable box, and place the user's text cursor in there so they could instantly start typing. upon editing the tag and hitting enter or comma, bring up a modal that asks 'Change tag to x? y posts will be updated' 'yes' 'no'.
+    
